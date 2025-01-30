@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas</title>
+    <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/styles1.css">
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+          <h1>
+            <a href="#" class="logo">GuimarBot</a>
+          </h1>
+    
+          <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+              <a href="#" class="logo">GuimarBot</a>
+    
+              <button class="nav-close-btn" aria-label="Cerrar menú" data-nav-toggler>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+    
+            <ul class="navbar-list"> 
+              <li class="navbar-item">
+                <a href="index.html#home" class="navbar-link" data-nav-toggler>Inicio</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#about" class="navbar-link" data-nav-toggler>Acerca de</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#courses" class="navbar-link" data-nav-toggler>Cursos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#event" class="navbar-link" data-nav-toggler>Eventos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#plans-container" class="navbar-link" data-nav-toggler>Planes de Suscripción</a>
+              </li>
+              <li class="navbar-item"></li>
+                <a href="Postular.html" class="navbar-link" data-nav-toggler>Postular Beca</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#newsletter" class="navbar-link" data-nav-toggler>Contacto</a> <!-- Cambiado a español -->
+              </li>
+            </ul>
+    
+            
+          </nav>
+    
+          <div class="header-actions">
+            <button class="header-action-btn" aria-label="Abrir búsqueda" data-search-toggler>
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+    
+            <!-- Botón del carrito -->
+            <button class="header-action-btn" aria-label="Carrito-Compra" id="mostrar-carrito">
+              <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+              <span id="cart-count" class="cart-count">0</span>
+            </button>
+    
+            
+            <div id="cart-dropdown" class="cart-dropdown hidden">
+              <table id="lista-carrito" class="cart-table">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+    
+              <div class="cart-footer">
+                <button id="vaciar-carrito" class="btn btn-primary">Vaciar carrito</button>
+                <p id="total-precio" class="total-precio">Total: $0.00</p>
+                <button id="pagar-carrito" class="btn btn-primary" onclick="window.location.href='pago.html'" >Pagar</button>
+              </div>
+              
+            </div>
+    
+            <a href="#" class="header-action-btn login-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+              <span class="span">Iniciar sesión / Registrarse</span> <!-- Cambiado a español -->
+            </a>
+    
+            <button class="header-action-btn nav-open-btn" aria-label="Abrir menú" data-nav-toggler>
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+    
+          <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+      </div>
+    
+      </header>
+
+<body>
+  <div class="main-section">
+    <!-- Información del Profesor -->
+    <div class="professor-info">
+      <img src="./assets/images/jose.jpg" alt="Profesor José Ramírez" class="professor-image">
+      <div class="professor-details">
+        <h3>José Ramírez</h3>
+        <p>Especialista en Desarrollo de Aplicaciones Móviles</p>
+        <p>Imparte clases sobre desarrollo de aplicaciones móviles con Android y iOS, cubriendo tanto la parte técnica como la experiencia de usuario.</p>
+      </div>
+    </div>
+
+    <!-- Información del Curso -->
+    <div class="course-info">
+      <h1>Curso de Desarrollo de Aplicaciones Móviles</h1>
+      <p>Aprende a crear aplicaciones móviles funcionales y atractivas para Android e iOS. El curso cubre desde la programación básica hasta la implementación avanzada de características.</p>
+      <div class="course-details">
+        <div class="requirements">
+          <h3>Conocimientos Previos</h3>
+          <ul>
+            <li>Programación Básica</li>
+            <li>Conocimientos básicos de diseño de interfaces</li>
+          </ul>
+          <h3>Software y Recursos </h3>
+          <ul>
+            <li>Android Studio</li>
+            <li>Xcode para desarrollo en iOS</li>
+            <li>Flutter </li>
+            <li>Git para control de versiones</li>
+            <li>Material de lectura y tutoriales</li>
+            <li>Recursos sobre diseño UI/UX recomendados</li>
+          </ul>
+        </div>
+        <div class="certificate">
+          <h3>Certificado</h3>
+          <p>Al finalizar el curso, recibirás un certificado que valida tus habilidades en el desarrollo de aplicaciones móviles.</p>
+          <img src="./assets/images/PARA EL VIDEO.jpg" alt="Certificado">
+        </div>
+      </div>
+    </div>
+</div>
+
+  <!-- Cursos relacionados -->
+<section class="section course" id="courses" aria-label="course">
+  <div class="container">
+
+    <ul class="grid-list">
+
+      <!-- Curso 1: Desarrollo de Aplicaciones Android -->
+      <li>
+        <div class="course-card">
+
+          <figure class="card-banner">
+            <img src="./assets/images/app.jpg" width="370" height="270" loading="lazy"
+              alt="Desarrollo de Aplicaciones Android desde cero" class="img-cover">
+          </figure>
+
+          <div class="card-actions">
+
+            <span class="badge">Intermedio</span>
+
+            <button class="whishlist-btn" aria-label="Add to wishlist" data-whish-btn>
+              <ion-icon name="heart"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="card-content">
+
+            <ul class="card-meta-list">
+
+              <li class="card-meta-item">
+                <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+
+                <span class="card-meta-text">40 lecciones</span>
+              </li>
+
+              <li class="card-meta-item">
+                <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                <time datetime="PT20H10M00S" class="card-meta-text">20h 10m</time>
+              </li>
+
+            </ul>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">Desarrollo de Aplicaciones Android desde cero</a>
+            </h3>
+
+            <div class="rating-wrapper">
+
+              <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+
+              <span class="rating-text">(25 Visitas)</span>
+
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+      <!-- Curso 2: Desarrollo de Aplicaciones iOS -->
+      <li>
+        <div class="course-card">
+
+          <figure class="card-banner">
+            <img src="./assets/images/ios.jpg" width="370" height="270" loading="lazy"
+              alt="Desarrollo de Aplicaciones iOS con Swift" class="img-cover">
+          </figure>
+
+          <div class="card-actions">
+
+            <span class="badge">Avanzado</span>
+
+            <button class="whishlist-btn" aria-label="Add to wishlist" data-whish-btn>
+              <ion-icon name="heart"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="card-content">
+
+            <ul class="card-meta-list">
+
+              <li class="card-meta-item">
+                <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+
+                <span class="card-meta-text">50 lecciones</span>
+              </li>
+
+              <li class="card-meta-item">
+                <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                <time datetime="PT22H30M00S" class="card-meta-text">22h 30m</time>
+              </li>
+
+            </ul>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">Desarrollo de Aplicaciones iOS con Swift</a>
+            </h3>
+
+            <div class="rating-wrapper">
+
+              <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+
+              <span class="rating-text">(30 Visitas)</span>
+
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <!-- Curso 4: Introducción al Desarrollo Móvil -->
+      <li>
+        <div class="course-card">
+
+          <figure class="card-banner">
+            <img src="./assets/images/inro.png" width="370" height="270" loading="lazy"
+              alt="Introducción al Desarrollo de Aplicaciones Móviles" class="img-cover">
+          </figure>
+
+          <div class="card-actions">
+
+            <span class="badge">Básico</span>
+
+            <button class="whishlist-btn" aria-label="Add to wishlist" data-whish-btn>
+              <ion-icon name="heart"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="card-content">
+
+            <ul class="card-meta-list">
+
+              <li class="card-meta-item">
+                <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+
+                <span class="card-meta-text">25 lecciones</span>
+              </li>
+
+              <li class="card-meta-item">
+                <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                <time datetime="PT15H00M00S" class="card-meta-text">15h 00m</time>
+              </li>
+
+            </ul>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">Introducción al Desarrollo de Aplicaciones Móviles</a>
+            </h3>
+
+            <div class="rating-wrapper">
+
+              <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+
+              <span class="rating-text">(10 Visitas)</span>
+
+            </div>
+          </div>
+
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+   <!-- Opiniones -->
+<section class="course-reviews">
+  <h2>Opiniones del Curso</h2>
+  <div class="review-summary">
+    <p>⭐ 4.7 - 320 opiniones</p>
+  </div>
+  <div class="reviews">
+    <div class="review">
+      <p><strong>Martín López</strong> ⭐⭐⭐⭐⭐</p>
+      <p>El profesor tiene una manera muy clara de enseñar. Los proyectos son prácticos y aplicables, y cubren todos los aspectos necesarios para crear una app.</p>
+    </div>
+    <div class="review">
+      <p><strong>Elena Sánchez</strong> ⭐⭐⭐⭐⭐</p>
+      <p>Un curso excelente. Me ha ayudado a mejorar mis habilidades en desarrollo móvil. Los ejemplos de código son muy útiles y bien explicados.</p>
+    </div>
+    <!-- Más opiniones -->
+    <div class="extra-reviews">
+      <div class="review">
+        <p><strong>Carlos Rodríguez</strong> ⭐⭐⭐⭐</p>
+        <p>El curso es muy bueno, pero la parte de diseño UI/UX podría estar más detallada. Aún así, lo recomiendo.</p>
+      </div>
+      <div class="review">
+        <p><strong>Lucía Martínez</strong> ⭐⭐⭐⭐⭐</p>
+        <p>La metodología del profesor es fantástica. Todo está muy bien organizado, y los ejercicios son interactivos y fáciles de seguir.</p>
+      </div>
+      <div class="review">
+        <p><strong>Javier Torres</strong> ⭐⭐⭐⭐⭐</p>
+        <p>Este curso me dio las herramientas necesarias para crear mi primera aplicación móvil. ¡Estoy muy agradecido!</p>
+      </div>
+    </div>
+  </div>
+  <button id="load-more" class="load-more">Ver más comentarios</button>
+</section>
+</html>
+<script src="./assets/js/script1.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

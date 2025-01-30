@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="icon" href="images/pagos.png" type="image/png">
+   <title>GuimarBot - Métodos de Pago</title>
+
+   <!-- Font Awesome CDN link para íconos -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+   <link rel="stylesheet" href="css/styles_pago.css">
+
+</head>
+<body>
+
+   <header class="header">
+      
+      <section class="flex">
+   
+         <a href="home.html" class="logo">GuimarBot</a>
+   
+         <form action="search.html" method="post" class="search-form">
+            <input type="text" name="search_box" required placeholder="buscar cursos..." maxlength="100">
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+   
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+   
+         <div class="profile">
+            <img src="images/pic-1.jpg" class="image" alt="">
+            <h3 class="name">Hector Caballero</h3>
+            <p class="role">estudiante</p>
+            <a href="profile.html" class="btn">ver perfil</a>
+            <div class="flex-btn">
+               <a href="login.html" class="option-btn">Acceso</a>
+               <a href="register.html" class="option-btn">Registro</a>
+            </div>
+         </div>
+   
+      </section>
+   
+   </header>   
+   
+   <div class="side-bar">
+   
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
+      </div>
+   
+      <div class="profile">
+         <img src="images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">Hector Caballero</h3>
+         <p class="role">estudiante</p>
+         <a href="profile.html" class="btn">ver perfil</a>
+      </div>
+   
+      <nav class="navbar">
+        <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+         <a href="home.html"><i class="fas fa-home"></i><span>Inicio</span></a>
+         <a href="about.html"><i class="fas fa-question"></i><span>Acerca de nosotros</span></a>
+         <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Cursos</span></a>
+         <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Maestros</span></a>
+         <a href="contact.html"><i class="fas fa-headset"></i><span>Contáctanos</span></a>
+         <a href="pagos.html"><i class="fas fa-wallet"></i><span>Pagos</span></a>
+      </nav>
+   
+   </div>
+
+
+   
+   <section class="payments">
+      <div class="container">
+        <form action="">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Direccion de Envio</h3>
+                    <div class="input-box">
+                        <span>Nombre Completo: </span>
+                        <input type="text"
+                        placeholder="Garcilazo Giovanni">
+                    </div>
+                    <div class="input-box">
+                        <span>Email: </span>
+                        <input type="email"
+                        placeholder="example@example.com">
+                    </div>
+                    <div class="input-box">
+                        <span>Direccion: </span>
+                        <input type="text"
+                        placeholder="Calle - Localidad">
+                    </div>
+                    <div class="input-box">
+                        <span>Departamento: </span>
+                        <input type="text"
+                        placeholder="Lima">
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>País: </span>
+                            <input type="text"
+                            placeholder="Perú">
+                        </div>
+                        <div class="input-box">
+                            <span>Codigo Postal: </span>
+                            <input type="text"
+                            placeholder="23456">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3 class="title">Formas de Pago</h3>
+                    <div class="input-box">
+                        <span>Tarjetas Aceptadas: </span>
+                        <img src="images/ICONO_PAGO1.png" alt="">
+                    </div>
+                    <div class="input-box">
+                        <span>Nombre en la Tarjeta: </span>
+                        <input type="text"
+                        placeholder="Garcilazo Giovanni">
+                    </div>
+                    <div class="input-box">
+                        <span>Numero de la Tarjeta: </span>
+                        <input type="number"
+                        placeholder="1111 2222 3333 4444">
+                    </div>
+                    <div class="input-box">
+                        <span>Mes de Expiración: </span>
+                        <input type="text"
+                        placeholder="Septiembre">
+                    </div>
+                    
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>Año de Expiración : </span>
+                            <input type="number"
+                            placeholder="2026">
+                        </div>
+                        <div class="input-box">
+                            <span>CVV: </span>
+                            <input type="number"
+                            placeholder="123">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <button type="submit" class="btn">Entregar</button>
+        </form>
+    </div>
+   </section>
+
+
+
+   
+   <!-- custom js file link  -->
+   <script src="js/script.js"></script>
+
+</body>
+
+
+</html>

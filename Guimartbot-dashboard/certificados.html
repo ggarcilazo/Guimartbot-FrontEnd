@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Certificados - Guimartbot</title>
+    <link rel="stylesheet" href="css/certificados.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <!-- Agrega la biblioteca jsPDF para la generación de PDFs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Guimartbot</h2>
+            <nav>
+                <ul>
+                    <li><a href="index2.html"><i class="fas fa-home"></i> Resumen</a></li>
+                    <li><a href="bandeja_entrada.html"><i class="fas fa-inbox"></i> Bandeja de Entrada</a></li>
+                    <li><a href="usuarios.html"><i class="fas fa-users"></i> Usuarios</a></li>
+                    <li><a href="docentes.html"><i class="fas fa-chalkboard-teacher"></i> Docentes</a></li>
+                    <li><a href="cursos.html"><i class="fas fa-book"></i> Cursos</a></li> <!-- Nueva línea agregada -->
+                    <li><a href="certificados.html"><i class="fas fa-certificate"></i> Certificados</a></li>
+                    <li><a href="becas.html"><i class="fas fa-graduation-cap"></i> Becas</a></li>
+                    <li><a href="pagos.html"><i class="fas fa-money-bill-wave"></i> Pagos</a></li>
+                    <li><a href="recursos.html"><i class="fas fa-book"></i> Recursos</a></li>
+                    <li><a href="administradores.html"><i class="fas fa-user-shield"></i> Administradores</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="content">
+            <h1>Gestión de Certificados</h1>
+
+            <!-- Barra de búsqueda y filtro -->
+            <div class="certificados-controls">
+                <input type="text" placeholder="Buscar certificados..." class="search-bar"
+                    oninput="filterCertificates()">
+                <select class="filter-select" onchange="filterCertificates()">
+                    <option value="all">Todos los Cursos</option>
+                    <option value="java">Curso de Java</option>
+                    <option value="python">Curso de Python</option>
+                    <option value="web">Curso de Web</option>
+                </select>
+            </div>
+
+            <!-- Tabla de certificados -->
+            <section class="certificados-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>ID Certificado</th>
+                            <th>ID Usuario</th>
+                            <th>Nombre del Curso</th>
+                            <th>Fecha de Finalización</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="certificadoTableBody">
+                        <!-- Ejemplo de fila -->
+                        <tr>
+                            <td>001</td>
+                            <td>123</td>
+                            <td>Curso de Java</td>
+                            <td>2023-05-10</td>
+                            <td>
+                                <button class="action-button details"
+                                    onclick="showCertificateDetails('001')">Detalles</button>
+                                <button class="action-button download"
+                                    onclick="downloadCertificate('001')">Descargar</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>002</td>
+                            <td>124</td>
+                            <td>Curso de Python</td>
+                            <td>2023-06-15</td>
+                            <td>
+                                <button class="action-button details"
+                                    onclick="showCertificateDetails('002')">Detalles</button>
+                                <button class="action-button download"
+                                    onclick="downloadCertificate('002')">Descargar</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal para Detalles del Certificado -->
+    <div class="modal" id="certificateModal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeCertificateModal()">&times;</span>
+            <h3 id="modalTitle">Detalles del Certificado</h3>
+            <div id="modalContent">
+                <!-- Aquí se insertarán los detalles del certificado -->
+            </div>
+        </div>
+    </div>
+
+    <script src="js/certificados.js"></script>
+</body>
+
+</html>

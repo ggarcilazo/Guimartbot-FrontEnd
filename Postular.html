@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Postular a Beca - GuimarBot</title>
+    <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/stylebeca.css">
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+          <h1>
+            <a href="#" class="logo">GuimarBot</a>
+          </h1>
+    
+          <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+              <a href="#" class="logo">GuimarBot</a>
+    
+              <button class="nav-close-btn" aria-label="Cerrar menú" data-nav-toggler>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+    
+            <ul class="navbar-list"> 
+              <li class="navbar-item">
+                <a href="index.html#home" class="navbar-link" data-nav-toggler>Inicio</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#about" class="navbar-link" data-nav-toggler>Acerca de</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#courses" class="navbar-link" data-nav-toggler>Cursos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#event" class="navbar-link" data-nav-toggler>Eventos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#plans-container" class="navbar-link" data-nav-toggler>Planes de Suscripción</a>
+              </li>
+              <li class="navbar-item"></li>
+                <a href="Postular.html" class="navbar-link" data-nav-toggler>Postular Beca</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#newsletter" class="navbar-link" data-nav-toggler>Contacto</a> <!-- Cambiado a español -->
+              </li>
+            </ul>
+    
+            
+          </nav>
+    
+          <div class="header-actions">
+            <button class="header-action-btn" aria-label="Abrir búsqueda" data-search-toggler>
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+    
+            <!-- Botón del carrito -->
+            <button class="header-action-btn" aria-label="Carrito-Compra" id="mostrar-carrito">
+              <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+              <span id="cart-count" class="cart-count">0</span>
+            </button>
+    
+            
+            <div id="cart-dropdown" class="cart-dropdown hidden">
+              <table id="lista-carrito" class="cart-table">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+    
+              <div class="cart-footer">
+                <button id="vaciar-carrito" class="btn btn-primary">Vaciar carrito</button>
+                <p id="total-precio" class="total-precio">Total: $0.00</p>
+                <button id="pagar-carrito" class="btn btn-primary" onclick="window.location.href='pago.html'" >Pagar</button>
+              </div>
+              
+            </div>
+    
+            <a href="#" class="header-action-btn login-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+              <span class="span">Iniciar sesión / Registrarse</span> <!-- Cambiado a español -->
+            </a>
+    
+            <button class="header-action-btn nav-open-btn" aria-label="Abrir menú" data-nav-toggler>
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+    
+          <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+      </div>
+    
+      </header>
+
+      <div id="main-container">
+        <!-- Video Siempre Visible -->
+        <div class="video-wrapper">
+            <iframe id="course-video" src="https://www.youtube.com/embed/eYpi4J8Cfss?enablejsapi=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <!-- Secciones -->
+        <section id="video-section" class="section active">
+          <h1>Visualiza el Video</h1>
+          <p>Por favor, mira el video sobre el curso. Luego realiza el cuestionario.</p>
+          <button id="quiz-button" class="btn" disabled>Realizar Cuestionario</button>
+        </section>
+
+        <section id="form-section" class="section">
+          <h1>Examen Corto</h1>
+          <form id="quiz-form">
+            <label for="question1">1. ¿Qué aprendiste del video?</label>
+            <textarea id="question1" placeholder="Escribe tu respuesta aquí..." required></textarea>
+    
+            <label for="question2">2. ¿Qué mensaje principal destacó?</label>
+            <textarea id="question2" placeholder="Escribe tu respuesta aquí..." required></textarea>
+    
+            <label for="question3">3. ¿Cómo aplicarías lo aprendido en un contexto práctico?</label>
+            <textarea id="question3" placeholder="Escribe tu respuesta aquí..." required></textarea>
+    
+            <button type="submit" class="btn">Enviar Respuestas</button>
+          </form>
+        </section>
+
+        <section id="certificate-section" class="section">
+          <h1>Generar Certificado</h1>
+          <div class="form-group">
+            <input type="text" id="name-input" placeholder="Tu Nombre" required>
+            <button id="generate-certificate-btn" class="btn">Generar Certificado</button>
+          </div>
+          <div id="certificate-preview" style="display: none;">
+            <p id="certificate-name"></p>
+            <button id="download-certificate-btn" class="btn">Descargar Certificado</button>
+          </div>
+        </section>
+
+        <section id="application-section" class="section">
+          <h1>Postular a la Beca</h1>
+          <form id="application-form">
+            <div class="form-group">
+              <label for="study-area">Área de Estudio</label>
+              <select id="study-area" required>
+                <option value="" disabled selected>Seleccionar</option>
+                <option value="robotica">Robótica</option>
+                <option value="programacion">Programación</option>
+                <option value="matematicas">Matemáticas</option>
+                <option value="ciencia-datos">Ciencia de Datos</option>
+                <option value="ciberseguridad">Ciberseguridad</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="identity-doc">Documento de Identidad</label>
+              <input type="file" id="identity-doc" required>
+            </div>
+
+            <div class="form-group">
+              <label for="certificate-doc">Certificado</label>
+              <input type="file" id="certificate-doc" required>
+            </div>
+
+            <button type="submit" class="btn">Enviar Postulación</button>
+          </form>
+        </section>
+      </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <!-- custom js link -->
+    <script src="./assets/js/scriptpostular.js"></script>
+    <script src="./assets/js/script.js" defer></script>
+
+    <!-- ionicon link -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

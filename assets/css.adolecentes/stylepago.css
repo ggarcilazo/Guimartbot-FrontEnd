@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Configuración principal del contenedor */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-image: url("/front-end/assets/images/adultos.png");
+    padding: 25px;
+    gap: 20px;
+}
+
+/* Columna de orden a la izquierda */
+.order-column {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    gap: 10px;
+}
+
+
+/* Cuadro morado para el encabezado del resumen */
+.order-summary {
+    padding: 25px;
+    background: hsl(230, 20%, 10%);;
+    color: #fff;
+    border-radius: 10px;
+}
+
+
+/* Cuadro blanco para detalles de la compra */
+.order-details {
+    padding: 20px;
+    background: hsl(230, 20%, 10%);
+    border-radius: 10px;
+}
+
+
+
+
+/* Estilos del encabezado del resumen */
+.summary-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.order-title {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 17px; /* Reduce el tamaño a 14px */
+    color: hsl(30, 59%, 41%); /* Asegúrate de que sea visible en el fondo */
+}
+
+
+.order-items {
+    margin-top: 15px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.order-item .price {
+    font-weight: 600;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    color: #6c63ff;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-top: 15px;
+    color: white;
+}
+
+.container form {
+    width: 700px;
+    padding: 40px;
+    background: hsl(230, 20%, 10%);
+    border-radius: 10px;
+    margin-left: 20px;
+    border: solid 2px hsl(36, 100%, 55%);;
+}
+
+/* Configuración de columnas y estilos de formularios */
+form .row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.row .column {
+    flex: 1 1 250px;
+}
+
+.column .title {
+    font-size: 20px;
+    color: hsl(30, 59%, 41%);
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.column .input-box {
+    margin: 15px 0;
+}
+
+.input-box span {
+    display: block;
+    margin-bottom: 10px;
+    color: hsl(30, 59%, 41%);
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid hsl(36, 100%, 55%);
+    border-radius: 6px;
+    font-size: 15px;
+    background-color: hsla(0, 0%, 100%, 0.1);;
+}
+
+.column .flex {
+    display: flex;
+    gap: 15px;
+}
+
+.flex .input-box {
+    margin-top: 5px;
+}
+
+form .btn {
+    width: 100%;
+    padding: 12px;
+    background: hsl(230, 20%, 15%);;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: white;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: .5s;
+    font-weight: bold;
+}
+
+form .btn:hover {
+    background-color: hsl(36, 100%, 55%);
+    color: hsla(0, 0%, 0%, 0.8);
+    font-weight: bold;
+}
+
+/* Opciones de pago */
+.payment-options {
+    display: flex;
+    gap: 10px;
+}
+
+.payment-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.payment-button img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.payment-button img:hover {
+    transform: scale(1.1);
+}
+
+
+
+/* Configuración del botón de retroceso y logo */
+.back-button-container {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    gap: 10px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+.back-button-container:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.arrow {
+    font-size: 18px;
+    color: hsl(30, 59%, 41%);
+}
+
+.logo-image {
+    width: auto;
+    height: 30px; /* Tamaño similar a la letra */
+}
+
+.back-text {
+    font-weight: 600;
+    font-size: 18px;
+    color: hsl(30, 59%, 41%);
+}
+
+/* Estilos adicionales para hover y efectos de transición */
+.back-button-container:hover .back-text {
+    content: "VOLVER | GUIMARBOT";
+    display: inline-block;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+
+
+
+.cart-table {
+    width: 100%;
+  }
+  
+  .cart-table th,
+  .cart-table td {
+    padding: 8px;
+    text-align: left;
+    color: hsl(30, 59%, 41%);
+  }
+  
+  .cart-table th:nth-child(3),
+  .cart-table th:nth-child(4),
+  .cart-table th:nth-child(5),
+  .cart-table td:nth-child(3),
+  .cart-table td:nth-child(4),
+  .cart-table td:nth-child(5) {
+    text-align: center; /* Centrar las columnas Precio, Cantidad y Eliminar */
+  }
+  
+  .cart-table img {
+    width: 50px;
+  }
+
+
+  .cart-table th,
+.cart-table td {
+  padding: 8px;
+  text-align: left;
+}
+
+
+.borrar {
+    background-color: hsl(230, 20%, 15%);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.borrar:hover {
+    background-color: hsl(36, 100%, 55%);
+    color: hsla(0, 0%, 0%, 0.8);
+}

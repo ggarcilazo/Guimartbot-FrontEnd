@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bandeja de Entrada - Guimartbot</title>
+    <link rel="stylesheet" href="css/bandeja_entrada.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Guimartbot</h2>
+            <nav>
+                <ul>
+                    <li><a href="index2.html"><i class="fas fa-home"></i> Resumen</a></li>
+<li><a href="bandeja_entrada.html"><i class="fas fa-inbox"></i> Bandeja de Entrada</a></li>
+<li><a href="usuarios.html"><i class="fas fa-users"></i> Usuarios</a></li>
+<li><a href="docentes.html"><i class="fas fa-chalkboard-teacher"></i> Docentes</a></li>
+<li><a href="cursos.html"><i class="fas fa-book"></i> Cursos</a></li> <!-- Nueva línea agregada -->
+<li><a href="certificados.html"><i class="fas fa-certificate"></i> Certificados</a></li>
+<li><a href="becas.html"><i class="fas fa-graduation-cap"></i> Becas</a></li>
+<li><a href="pagos.html"><i class="fas fa-money-bill-wave"></i> Pagos</a></li>
+<li><a href="recursos.html"><i class="fas fa-book"></i> Recursos</a></li>
+<li><a href="administradores.html"><i class="fas fa-user-shield"></i> Administradores</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+        
+        
+        <!-- Contenido Principal -->
+        <main class="content">
+            <h1>Bandeja de Entrada</h1>
+            
+            <!-- Tabla de mensajes -->
+            <section class="message-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>De</th>
+                            <th>Asunto</th>
+                            <th>Fecha</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ana Pérez</td>
+                            <td>Consulta sobre curso de Python</td>
+                            <td>10 oct</td>
+                            <td><button class="view-button" onclick="showReplyPopup('Ana Pérez', 'Consulta sobre curso de Python', 'Hola, quisiera saber más sobre el curso de Python...')">Ver</button></td>
+                        </tr>
+                        <tr>
+                            <td>Juan Rodríguez</td>
+                            <td>Problemas con la certificación</td>
+                            <td>10 oct</td>
+                            <td><button class="view-button" onclick="showReplyPopup('Juan Rodríguez', 'Problemas con la certificación', 'Tengo problemas para acceder a mi certificado...')">Ver</button></td>
+                        </tr>
+                        <tr>
+                            <td>Laura Gómez</td>
+                            <td>Consulta sobre plan premium</td>
+                            <td>9 oct</td>
+                            <td><button class="view-button" onclick="showReplyPopup('Laura Gómez', 'Consulta sobre plan premium', 'Hola, quisiera saber más detalles sobre el plan premium...')">Ver</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+    
+    <!-- Modal de Respuesta -->
+    <div class="reply-popup" id="replyPopup">
+        <div class="popup-content">
+            <span class="close-popup" onclick="hideReplyPopup()">×</span>
+            <h3 id="popupTitle">Responder al Mensaje</h3>
+            <p id="popupContent"></p>
+            <textarea placeholder="Escribe tu respuesta aquí..."></textarea>
+            <div class="popup-buttons">
+                <button class="send-button" onclick="sendReply()">Enviar Respuesta</button>
+                <button class="close-button" onclick="hideReplyPopup()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Notificación de Mensaje Enviado -->
+    <div class="notification" id="notification">
+        <p>Mensaje enviado</p>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        function showReplyPopup(name, subject, message) {
+            document.getElementById("popupTitle").textContent = `${name} - ${subject}`;
+            document.getElementById("popupContent").textContent = message;
+            document.getElementById("replyPopup").style.display = "flex";
+        }
+
+        function hideReplyPopup() {
+            document.getElementById("replyPopup").style.display = "none";
+        }
+
+        function sendReply() {
+            // Ocultar el popup de respuesta
+            hideReplyPopup();
+            
+            // Mostrar la notificación
+            const notification = document.getElementById("notification");
+            notification.style.display = "block";
+
+            // Ocultar la notificación después de 3 segundos
+            setTimeout(() => {
+                notification.style.display = "none";
+            }, 3000);
+        }
+    </script>
+</body>
+</html>

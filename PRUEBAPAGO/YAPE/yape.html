@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pago</title>
+    <link rel="stylesheet" href="./pagoyape.css">
+</head>
+<body>
+    <div class="payment-modal">
+        <div class="payment-header">
+            <button id="btn-qr" class="tab-button active">Código QR</button>
+            <button id="btn-phone" class="tab-button">N° de Codigo</button>
+        </div>
+        
+        <!-- Contenedor para Código QR -->
+        <div id="qr-container" class="tab-content">
+            <div class="payment-details">
+                <img src="../front-end/assets/images/QR.jpg" alt="Código QR" class="qr-code">
+                <p>GARCILAZO LOPEZ GIOVANNI JOAQUIN</p>
+                <p>946111870</p>
+            </div>
+        </div>
+        
+        
+        <!-- Contenedor para Número de celular -->
+        <div id="phone-content" class="tab-content hidden">
+          <p>Copiar Codigo:</p>
+          <input type="text" value=""  class="phone-number">
+        </div>
+
+        <div class="payment-amount">
+          <p>Monto a Pagar con Yape</p>
+          <h2>$58.00</h2>
+        </div>
+        
+        <p class="payment-instructions">
+          Escanee el código QR o agregue el número de celular. Cuando realice el pago, haga clic en el botón continuar.
+        </p>
+        <div class="payment-buttons">
+          <button class="btn-continue-yape">Continuar</button>
+          <button class="btn-close-yape">× Cerrar</button>
+        </div>
+
+    </div>
+
+    <div class="upload-modal hidden" id="uploadModal">
+        <h3>Adjunte la captura de pantalla del comprobante de pago</h3>
+        <div class="upload-box" id="uploadBox">
+            <input type="file" id="fileInput" class="file-input" onchange="showPreview(event)" accept="image/*">
+            <button class="select-file-button" onclick="document.getElementById('fileInput').click()">Seleccionar archivo</button>
+            <p>ó soltar archivo aquí.</p>
+            <div id="image-preview" class="image-preview hidden">
+                <img id="preview-img" src="" alt="Vista previa de la imagen" />
+            </div>
+        </div>        
+        <p class="payment-instructions">
+            El pedido se completará después de validar el comprobante de pago. Si no coincide, se cancelará.
+        </p>
+
+        <div class="payment-buttons">
+            <button class="btn-finalize">Finalizar Compra</button>
+            <button class="btn-back">Volver</button>
+        </div>
+    </div>
+    
+    <script src="pagoyape.js"></script>
+</body>
+</html>

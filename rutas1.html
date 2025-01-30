@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas</title>
+    <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/styles1.css">
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+          <h1>
+            <a href="#" class="logo">GuimarBot</a>
+          </h1>
+    
+          <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+              <a href="#" class="logo">GuimarBot</a>
+    
+              <button class="nav-close-btn" aria-label="Cerrar menú" data-nav-toggler>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+    
+            <ul class="navbar-list"> 
+              <li class="navbar-item">
+                <a href="index.html#home" class="navbar-link" data-nav-toggler>Inicio</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#about" class="navbar-link" data-nav-toggler>Acerca de</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#courses" class="navbar-link" data-nav-toggler>Cursos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#event" class="navbar-link" data-nav-toggler>Eventos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#plans-container" class="navbar-link" data-nav-toggler>Planes de Suscripción</a>
+              </li>
+              <li class="navbar-item"></li>
+                <a href="Postular.html" class="navbar-link" data-nav-toggler>Postular Beca</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#newsletter" class="navbar-link" data-nav-toggler>Contacto</a> <!-- Cambiado a español -->
+              </li>
+            </ul>
+    
+            
+          </nav>
+    
+          <div class="header-actions">
+            <button class="header-action-btn" aria-label="Abrir búsqueda" data-search-toggler>
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+    
+            <!-- Botón del carrito -->
+            <button class="header-action-btn" aria-label="Carrito-Compra" id="mostrar-carrito">
+              <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+              <span id="cart-count" class="cart-count">0</span>
+            </button>
+    
+            
+            <div id="cart-dropdown" class="cart-dropdown hidden">
+              <table id="lista-carrito" class="cart-table">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+    
+              <div class="cart-footer">
+                <button id="vaciar-carrito" class="btn btn-primary">Vaciar carrito</button>
+                <p id="total-precio" class="total-precio">Total: $0.00</p>
+                <button id="pagar-carrito" class="btn btn-primary" onclick="window.location.href='pago.html'" >Pagar</button>
+              </div>
+              
+            </div>
+    
+            <a href="#" class="header-action-btn login-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+              <span class="span">Iniciar sesión / Registrarse</span> <!-- Cambiado a español -->
+            </a>
+    
+            <button class="header-action-btn nav-open-btn" aria-label="Abrir menú" data-nav-toggler>
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+    
+          <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+      </div>
+    
+      </header>
+
+<body>
+  <div class="main-section">
+    <!-- Información del Profesor -->
+    <div class="professor-info">
+      <img src="./assets/images/image.png" alt="Profesor" class="professor-image">
+      <div class="professor-details">
+        <h3>Juan Pérez</h3>
+        <p>Especialista en Robótica</p>
+        <p>Imparte clases de desarrollo de algoritmos y diseño de robots avanzados.</p>
+      </div>
+    </div>
+
+    <!-- Información del Curso -->
+    <div class="course-info">
+      <h1>Curso de Robótica con Python</h1>
+      <p>Aprende a programar robots utilizando Python. Este curso cubre desde lo más básico hasta proyectos avanzados.</p>
+      <div class="course-details">
+        <div class="requirements">
+          <h3>Conocimientos Previos</h3>
+          <ul>
+            <li>Programación Básica</li>
+          </ul>
+          <h3>Software y Recursos</h3>
+          <ul>
+            <li>Editor de código</li>
+            <li>Python 3</li>
+            <li>Biblioteca RPi.GPIO</li>
+            <li>Simulador de robots</li>
+            <li>Mecánica y diseño </li>
+            <li>Drivers y herramientas</li>
+            <li>Computadoras y equipos complentos</li>
+          </ul>
+        </div>
+        <div class="certificate">
+          <h3>Certificado</h3>
+          <p>Al finalizar el curso, recibirás un certificado que acredita tu conocimiento en robótica y Python.</p>
+          <img src="./assets/images/PARA EL VIDEO.png" alt="Certificado">
+        </div>
+      </div>
+    </div>
+</div>
+     <!-- Cursos relacionados -->
+<section class="section course" id="courses" aria-label="course">
+  <div class="container">
+
+    <ul class="grid-list">
+
+      <!-- Curso 1 -->
+      <li>
+        <div class="course-card">
+
+          <figure class="card-banner">
+            <img src="./assets/images/progra.jpeg" width="370" height="270" loading="lazy"
+              alt="Introducción a la Programación Robótica" class="img-cover">
+          </figure>
+
+          <div class="card-actions">
+            <span class="badge">Básico</span>
+            <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
+              <ion-icon name="heart"></ion-icon>
+            </button>
+          </div>
+
+          <div class="card-content">
+
+            <ul class="card-meta-list">
+              <li class="card-meta-item">
+                <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                <span class="card-meta-text">30 lecciones</span>
+              </li>
+              <li class="card-meta-item">
+                <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                <time datetime="PT10H30M" class="card-meta-text">10h 30m</time>
+              </li>
+            </ul>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">Introducción a la Programación Robótica</a>
+            </h3>
+
+            <div class="rating-wrapper">
+              <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <span class="rating-text">(50 Visitas)</span>
+            </div>
+
+          </div>
+        </div>
+      </li>
+
+      <!-- Curso 2 -->
+      <li>
+        <div class="course-card">
+
+          <figure class="card-banner">
+            <img src="./assets/images/robot.jpg" width="370" height="270" loading="lazy"
+              alt="Construcción de Robots con Python y Arduino" class="img-cover">
+          </figure>
+
+          <div class="card-actions">
+            <span class="badge">Intermedio</span>
+            <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
+              <ion-icon name="heart"></ion-icon>
+            </button>
+          </div>
+
+          <div class="card-content">
+
+            <ul class="card-meta-list">
+              <li class="card-meta-item">
+                <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                <span class="card-meta-text">45 lecciones</span>
+              </li>
+              <li class="card-meta-item">
+                <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                <time datetime="PT15H00M" class="card-meta-text">15h</time>
+              </li>
+            </ul>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">Construcción de Robots con Python y Arduino</a>
+            </h3>
+
+            <div class="rating-wrapper">
+              <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star-outline"></ion-icon>
+              </div>
+              <span class="rating-text">(120 Visitas)</span>
+            </div>
+
+          </div>
+        </div>
+      </li>
+
+      <!-- Curso 3 -->
+      <li>
+        <div class="course-card">
+
+          <figure class="card-banner">
+            <img src="./assets/images/vison.jpg" width="370" height="270" loading="lazy"
+              alt="Sistemas de Visión para Robots Autónomos" class="img-cover">
+          </figure>
+
+          <div class="card-actions">
+            <span class="badge">Avanzado</span>
+            <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
+              <ion-icon name="heart"></ion-icon>
+            </button>
+          </div>
+
+          <div class="card-content">
+
+            <ul class="card-meta-list">
+              <li class="card-meta-item">
+                <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                <span class="card-meta-text">60 lecciones</span>
+              </li>
+              <li class="card-meta-item">
+                <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                <time datetime="PT20H00M" class="card-meta-text">20h</time>
+              </li>
+            </ul>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">Sistemas de Visión para Robots Autónomos</a>
+            </h3>
+
+            <div class="rating-wrapper">
+              <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+              <span class="rating-text">(200 Visitas)</span>
+            </div>
+
+          </div>
+        </div>
+      </li>
+
+    </ul>
+
+  </div>
+</section>
+
+    <!-- Opiniones -->
+<section class="course-reviews">
+  <h2>Opiniones del Curso</h2>
+  <div class="review-summary">
+    <p>⭐ 4.6 - 388 opiniones</p>
+  </div>
+  <div class="reviews">
+    <div class="review">
+      <p><strong>Leandro Tenjo</strong> ⭐⭐⭐⭐</p>
+      <p>El profesor explica de manera clara, aunque hizo falta más ejemplos en temas complejos.</p>
+    </div>
+    <div class="review">
+      <p><strong>Juan Asamela</strong> ⭐⭐⭐⭐⭐</p>
+      <p>La metodología del profesor es excelente, pero en la programación orientada a objetos faltó profundizar más.</p>
+    </div>
+    <!-- Más opiniones -->
+    <div class="extra-reviews">
+      <div class="review">
+        <p><strong>Ana Rodríguez</strong> ⭐⭐⭐⭐⭐</p>
+        <p>La enseñanza del profesor es excepcional, especialmente en la parte práctica del curso.</p>
+      </div>
+      <div class="review">
+        <p><strong>Carlos Pérez</strong> ⭐⭐⭐⭐</p>
+        <p>Muy bueno, pero me gustaría que el profesor incluyera más ejemplos interactivos.</p>
+      </div>
+      <div class="review">
+        <p><strong>Laura Gómez</strong> ⭐⭐⭐⭐⭐</p>
+        <p>El profesor tiene una habilidad única para explicar conceptos complejos de manera simple.</p>
+      </div>
+    </div>
+  </div>
+  <button id="load-more" class="load-more">Ver más comentarios</button>
+</section>
+</html>
+<script src="./assets/js/script1.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

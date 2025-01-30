@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Configuración principal del contenedor */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #dce1e8;
+    padding: 25px;
+    gap: 20px;
+    transition: all 0.5s ease; /* Suaviza la transición */
+}
+
+/* Columna de orden a la izquierda */
+.order-column {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    gap: 10px;
+    animation: slideIn 0.5s ease-out; /* Animación de entrada */
+}
+
+/* Cuadro morado para el encabezado del resumen */
+.order-summary {
+    padding: 25px;
+    background: #6c63ff;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para más profundidad */
+    transition: background-color 0.3s ease;
+}
+
+.order-summary:hover {
+    background-color: #5a4ae3; /* Cambio de color al pasar el ratón */
+}
+
+/* Cuadro blanco para detalles de la compra */
+.order-details {
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra para más profundidad */
+    transition: transform 0.3s ease;
+}
+
+.order-details:hover {
+    transform: scale(1.02); /* Efecto de escala al pasar el ratón */
+}
+
+/* Estilos del encabezado del resumen */
+.summary-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+}
+
+.back-button {
+    background: none;
+    border: none;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.back-button:hover {
+    color: #f0f0f0;
+}
+
+.order-title {
+    margin-top: 15px;
+    font-weight: 700;
+    font-size: 17px;
+    color: #fff;
+}
+
+/* Estilos de los artículos del pedido */
+.order-items {
+    margin-top: 15px;
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.order-item:hover {
+    background-color: #f1f1f1;
+}
+
+.order-item .price {
+    font-weight: 600;
+}
+
+.remove-button {
+    background: none;
+    border: none;
+    color: #6c63ff;
+    cursor: pointer;
+    font-size: 12px;
+    margin-left: 5px;
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 700;
+    margin-top: 15px;
+}
+
+/* Estilos del formulario */
+.container form {
+    width: 700px;
+    padding: 40px;
+    background: white;
+    border-radius: 10px;
+    margin-left: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    animation: slideIn 0.5s ease-out; /* Animación de entrada */
+}
+
+/* Configuración de columnas y estilos de formularios */
+form .row {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+.row .column {
+    flex: 1 1 250px;
+    transition: transform 0.3s ease;
+}
+
+.column:hover {
+    transform: scale(1.05); /* Efecto de escala en las columnas */
+}
+
+.column .title {
+    font-size: 20px;
+    color: #333;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.column .input-box {
+    margin: 15px 0;
+}
+
+.input-box span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 15px;
+    transition: border-color 0.3s ease;
+}
+
+.input-box input:focus {
+    border-color: #6c63ff; /* Cambio de color al hacer focus */
+}
+
+/* Botón principal */
+form .btn {
+    width: 100%;
+    padding: 12px;
+    background: #6c63ff;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    font-size: 17px;
+    color: #fff;
+    margin-top: 5px;
+    cursor: pointer;
+    transition: background-color 0.5s ease;
+}
+
+form .btn:hover {
+    background: #5a4ae3;
+}
+
+/* Opciones de pago */
+.payment-options {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.payment-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.payment-button img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.2s ease;
+}
+
+.payment-button img:hover {
+    transform: scale(1.1);
+}
+
+/* Configuración del botón de retroceso y logo */
+.back-button-container {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    gap: 10px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.back-button-container:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+.arrow {
+    font-size: 18px;
+}
+
+.logo-image {
+    width: auto;
+    height: 30px;
+}
+
+.back-text {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.back-button-container:hover .back-text {
+    content: "VOLVER | GUIMARBOT";
+    display: inline-block;
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+/* Tabla de carrito */
+.cart-table {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 8px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+}
+
+.cart-table th:nth-child(3),
+.cart-table th:nth-child(4),
+.cart-table th:nth-child(5),
+.cart-table td:nth-child(3),
+.cart-table td:nth-child(4),
+.cart-table td:nth-child(5) {
+    text-align: center;
+}
+
+.cart-table th,
+.cart-table td {
+    padding: 8px;
+    text-align: left;
+}
+
+.cart-table img {
+    width: 50px;
+    transition: transform 0.2s ease;
+}
+
+.cart-table img:hover {
+    transform: scale(1.1);
+}
+
+/* Estilo del botón de eliminar */
+.borrar {
+    background-color: #6c63ff;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.borrar:hover {
+    background-color: #5a4ae3;
+}
+
+/* Animaciones */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Media Queries para responsividad */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .order-column, .container form {
+        width: 100%;
+    }
+
+    .order-summary, .order-details {
+        padding: 20px;
+    }
+
+    .payment-options {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .order-title {
+        font-size: 14px;
+    }
+
+    .order-item {
+        font-size: 12px;
+    }
+
+    .btn {
+        font-size: 14px;
+    }
+
+    .back-text {
+        font-size: 16px;
+    }
+
+    .cart-table th, .cart-table td {
+        font-size: 12px;
+    }
+}
+
+
+/* Fondo translúcido */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fondo negro translúcido */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Superpone al resto */
+}
+
+/* Ocultar por defecto */
+.hidden {
+    display: none;
+}
+
+/* Contenedor del modal */
+
+
+/* Transición para suavizar la entrada */
+.modal-overlay.show {
+    display: flex;
+}

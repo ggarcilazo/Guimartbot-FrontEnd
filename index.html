@@ -1,0 +1,1328 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Cambiado a español -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GuimarBot</title> <!-- Título modificado -->
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+      <h1>
+        <a href="#" class="logo">GuimarBot</a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="#" class="logo">GuimarBot</a>
+
+          <button class="nav-close-btn" aria-label="Cerrar menú" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-toggler>Inicio</a> <!-- Cambiado a español -->
+          </li>
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link" data-nav-toggler>Acerca de</a> <!-- Cambiado a español -->
+          </li>
+          <li class="navbar-item">
+            <a href="#courses" class="navbar-link" data-nav-toggler>Cursos</a> <!-- Cambiado a español -->
+          </li>
+          <li class="navbar-item">
+            <a href="#event" class="navbar-link" data-nav-toggler>Eventos</a> <!-- Cambiado a español -->
+          </li>
+          <li class="navbar-item">
+            <a href="#plans-container" class="navbar-link" data-nav-toggler>Planes de Suscripción</a>
+          </li>
+          <li class="navbar-item"></li>
+            <a href="Postular.html" class="navbar-link" data-nav-toggler>Postular Beca</a> <!-- Cambiado a español -->
+          </li>
+          <li class="navbar-item">
+            <a href="#newsletter" class="navbar-link" data-nav-toggler>Contacto</a> <!-- Cambiado a español -->
+          </li>
+        </ul>
+
+        
+      </nav>
+
+      <div class="header-actions">
+        <button class="header-action-btn" aria-label="Abrir búsqueda" data-search-toggler>
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <!-- Botón del carrito -->
+        <button class="header-action-btn" aria-label="Carrito-Compra" id="mostrar-carrito">
+          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+        
+
+        
+        <div id="cart-dropdown" class="cart-dropdown hidden">
+          <table id="lista-carrito" class="cart-table">
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+
+          <div class="cart-footer">
+            <button id="vaciar-carrito" class="btn btn-primary">Vaciar carrito</button>
+            <p id="total-precio" class="total-precio">Total: $0.00</p>
+            <button id="pagar-carrito" class="btn btn-primary" onclick="window.location.href='pago.html'" >Pagar</button>
+          </div>
+        </div>
+
+        <a href="login.html" class="header-action-btn login-btn">
+          <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+          <span class="span">Iniciar sesión / Registrarse</span> <!-- Cambiado a español -->
+        </a>
+
+        <button class="header-action-btn nav-open-btn" aria-label="Abrir menú" data-nav-toggler>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </div>
+
+  </header>
+
+  <!--   - #SEARCH BOX -->
+  <div class="search-container" data-search-box>
+    <div class="container">
+      <button class="search-close-btn" aria-label="Cerrar búsqueda" data-search-toggler>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="search-wrapper">
+        <input type="search" name="search" placeholder="Buscar aquí..." aria-label="Buscar" class="search-field">
+        <button class="search-submit" aria-label="Enviar" data-search-toggler>
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <article>
+      <!-- 
+      - #HERO-->
+      <section class="hero" id="home" aria-label="hero" style="background-image: url('./assets/images/hero-bg.jpg')">
+        <div class="container">
+          <div class="hero-content">
+            <p class="section-subtitle">Un Futuro de Aprendizaje Mejor con Nosotros</p>
+            <h2 class="h1 hero-title">Cursos de Programación y Robótica para Todos</h2>
+            <p class="hero-text">
+              Descubre el fascinante mundo de la programación y la robótica con nuestros cursos diseñados para niños,
+              jóvenes y adultos. ¡Aprende, crea y diviértete con GuimarBot!
+            </p>
+            <a href="#" class="btn btn-primary">
+              <span class="span">Comienza Hoy</span>
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+          </div>
+      
+          <figure class="hero-banner">
+            <img src="./assets/images/hero-banner.png" width="600" height="600" loading="lazy" alt="imagen hero" class="w-200">
+          </figure>
+        
+      </section>
+      
+      
+
+
+      <!-- 
+  - #CATEGORY
+-->
+
+      <section class="section category" aria-label="category">
+        <div class="container">
+
+          <p class="section-subtitle">Categorías de Cursos</p>
+
+          <h2 class="h2 section-title">Temas Populares para Aprender</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <ion-icon name="cog-outline"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="rutas1.html">Robótica para Niños</a>
+                  </h3>
+
+                  <span class="card-meta">15 Cursos</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <ion-icon name="code-slash-outline"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="rutas2.html">Programación Divertida</a>
+                  </h3>
+
+                  <span class="card-meta">20 Cursos</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <ion-icon name="hardware-chip-outline"></ion-icon> <!-- Aquí está el ícono -->
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="rutas3.html">Inteligencia Artificial para Pequeños</a>
+                  </h3>
+
+                  <span class="card-meta">12 Cursos</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <ion-icon name="game-controller-outline"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="rutas4.html">Creación de Videojuegos</a>
+                  </h3>
+
+                  <span class="card-meta">10 Cursos</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <ion-icon name="phone-portrait-outline"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="rutas5.html">Desarrollo de Aplicaciones Móviles</a>
+                  </h3>
+
+                  <span class="card-meta">8 Cursos</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <ion-icon name="cloud-outline"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="rutas6.html">Nube y Almacenamiento</a>
+                  </h3>
+
+                  <span class="card-meta">5 Cursos</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <ion-icon name="shield-outline"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="rutas7.html">Ciberseguridad para Niños</a>
+                  </h3>
+
+                  <span class="card-meta">7 Cursos</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <ion-icon name="person-outline"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="rutas8.html">Liderazgo y Trabajo en Equipo</a>
+                  </h3>
+
+                  <span class="card-meta">9 Cursos</span>
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="category-card">
+
+                <div class="card-icon">
+                  <ion-icon name="trophy-outline"></ion-icon>
+                </div>
+
+                <div>
+                  <h3 class="h3 card-title">
+                    <a href="rutas9.html">Competiciones de Robótica</a>
+                  </h3>
+
+                  <span class="card-meta">6 Cursos</span>
+                </div>
+
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+      </section>
+
+
+      <!-- 
+  - #ABOUT
+-->
+
+      <section class="section about" id="about" aria-label="about">
+        <div class="container">
+
+          <figure class="about-banner">
+
+            <img src="./assets/images/about-banner.jpg" width="450" height="590" loading="lazy" alt="about banner"
+              class="w-100 about-img">
+
+            <img src="./assets/images/about-abs-1.jpg" width="188" height="242" loading="lazy" aria-hidden="true"
+              class="abs-img abs-img-1">
+
+            <img src="./assets/images/about-abs-2.jpg" width="150" height="200" loading="lazy" aria-hidden="true"
+              class="abs-img abs-img-2">
+
+          </figure>
+
+          <div class="about-content">
+
+            <p class="section-subtitle">Quiénes Somos</p>
+
+            <h2 class="h2 section-title">Ofrecemos la Mejor Experiencia de Aprendizaje</h2>
+
+            <ul class="about-list">
+
+              <li class="about-item">
+
+                <div class="item-icon item-icon-1">
+                  <img src="./assets/images/about-icon-1.png" width="30" height="30" loading="lazy" aria-hidden="true">
+                </div>
+
+                <div>
+                  <h3 class="h3 item-title">Instructores Expertos en la Industria</h3>
+
+                  <p class="item-text">
+                    Nuestros instructores son profesionales con experiencia en ingeniería de sistemas y tecnología
+                    educativa.
+                  </p>
+                </div>
+
+              </li>
+
+              <li class="about-item">
+
+                <div class="item-icon item-icon-2">
+                  <img src="./assets/images/about-icon-2.png" width="30" height="30" loading="lazy" aria-hidden="true">
+                </div>
+
+                <div>
+                  <h3 class="h3 item-title">Contenido de Cursos Actualizado</h3>
+
+                  <p class="item-text">
+                    Ofrecemos cursos que incorporan las últimas tendencias y tecnologías en el campo de la ingeniería.
+                  </p>
+                </div>
+
+              </li>
+
+              <li class="about-item">
+
+                <div class="item-icon item-icon-3">
+                  <img src="./assets/images/about-icon-3.png" width="30" height="30" loading="lazy" aria-hidden="true">
+                </div>
+
+                <div>
+                  <h3 class="h3 item-title">La Mayor Comunidad Estudiantil</h3>
+
+                  <p class="item-text">
+                    Únete a una comunidad activa de estudiantes y comparte tus experiencias y aprendizajes.
+                  </p>
+                </div>
+
+              </li>
+
+            </ul>
+
+            <a href="#" class="btn btn-primary">
+              <span class="span">Conócenos</span>
+
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+
+          </div>
+
+        </div>
+      </section>
+
+
+
+
+
+
+
+      <!-- 
+        - #COURSE
+      -->
+
+      <section class="section course" id="courses" aria-label="course"
+        style="background-image: url('./assets/images/course-bg.jpg')">
+        <div class="container">
+
+          <p class="section-subtitle">Cursos populares</p>
+
+          <h2 class="h2 section-title">Nuestros cursos populares</h2>
+
+          <ul class="grid-list">
+
+            <li>
+              <div class="course-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/course-1.jpg" width="370" height="270" loading="lazy"
+                    alt="Competitive Strategy law for all students" class="img-cover">
+                </figure>
+
+                <div class="card-actions">
+
+                  <span class="badge">Intermedio</span>
+
+                  <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
+                    <ion-icon name="heart"></ion-icon>
+                  </button>
+
+                </div>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="card-meta-text">35 lecciones</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <time datetime="PT18H15M44S" class="card-meta-text">18h 15m 44s</time>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3">
+                    <a href="../front-end/descripciones/Ley.html" class="card-title">Ley de Estrategia Competitiva para todos los estudiantes</a>
+                  </h3>
+
+                  <div class="rating-wrapper">
+
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <span class="rating-text">(18 Visitas)</span>
+
+                  </div>
+                  <button class="add-to-cart-btn" data-course-id="course-1">Agregar al carrito</button>
+
+                  <div class="card-footer">
+
+                    <div class="card-price">
+                      <span class="span">$29.00</span>
+
+                      <del class="del">$39.00</del>
+                    </div>
+
+                    <div class="card-meta-item">
+                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="card-meta-text">47 Estudiantes</span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/course-2.jpg" width="370" height="270" loading="lazy"
+                    alt="Machine Learning A-Z: Hands-On Python and java" class="img-cover">
+                </figure>
+
+                <div class="card-actions">
+
+                  <span class="badge">Avanzado</span>
+
+                  <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
+                    <ion-icon name="heart"></ion-icon>
+                  </button>
+
+                </div>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="card-meta-text">48 lecciones</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <time datetime="PT18H15M44S" class="card-meta-text">18h 15m 44s</time>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3">
+                    <a href="../front-end/descripciones/Aprendizaje.html" class="card-title">Aprendizaje automático A-Z: práctica con Python y Java</a>
+                  </h3>
+
+                  <div class="rating-wrapper">
+
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <span class="rating-text">(18 Visitas)</span>
+
+                  </div>
+                  <button class="add-to-cart-btn" data-course-id="course-1">Agregar al carrito</button>
+
+                  <div class="card-footer">
+
+                    <div class="card-price">
+                      <span class="span">Gratis</span>
+                    </div>
+
+                    <div class="card-meta-item">
+                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="card-meta-text">65 Estudiantes</span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/course-3.jpg" width="370" height="270" loading="lazy"
+                    alt="Achieving Advanced in Insights with Big" class="img-cover">
+                </figure>
+
+                <div class="card-actions">
+
+                  <span class="badge">Basico</span>
+
+                  <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
+                    <ion-icon name="heart"></ion-icon>
+                  </button>
+
+                </div>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="card-meta-text">80 lecciones</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <time datetime="PT18H15M44S" class="card-meta-text">18h 15m 44s</time>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3">
+                    <a href="../front-end/descripciones/Lograr.html" class="card-title">Lograr conocimientos avanzados con Big</a>
+                  </h3>
+
+                  <div class="rating-wrapper">
+
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <span class="rating-text">(18 Visitas)</span>
+
+                  </div>
+                  <button class="add-to-cart-btn" data-course-id="course-1">Agregar al carrito</button>
+
+                  <div class="card-footer">
+
+                    <div class="card-price">
+                      <span class="span">$59.00</span>
+
+                      <del class="del">$69.00</del>
+                    </div>
+
+                    <div class="card-meta-item">
+                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="card-meta-text">42 Estudiantes</span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/course-4.jpg" width="370" height="270" loading="lazy"
+                    alt="Education Makes A Person A Responsible Citizen" class="img-cover">
+                </figure>
+
+                <div class="card-actions">
+
+                  <span class="badge">Intermedio</span>
+
+                  <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
+                    <ion-icon name="heart"></ion-icon>
+                  </button>
+
+                </div>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="card-meta-text">31 lecciones</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <time datetime="PT18H15M44S" class="card-meta-text">18h 15m 44s</time>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3">
+                    <a href="../front-end/descripciones/La educación.html" class="card-title">La educación hace a una persona una ciudadana responsable</a>
+                  </h3>
+
+                  <div class="rating-wrapper">
+
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <span class="rating-text">(18 Visitas)</span>
+
+                  </div>
+                  <button class="add-to-cart-btn" data-course-id="course-1">Agregar al carrito</button>
+
+                  <div class="card-footer">
+
+                    <div class="card-price">
+                      <span class="span">$49.00</span>
+
+                      <del class="del">$59.00</del>
+                    </div>
+
+                    <div class="card-meta-item">
+                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="card-meta-text">46 Estudiantes</span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/course-5.jpg" width="370" height="270" loading="lazy"
+                    alt="Building A Better World One Student At A Time" class="img-cover">
+                </figure>
+
+                <div class="card-actions">
+
+                  <span class="badge">Avanzado</span>
+
+                  <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
+                    <ion-icon name="heart"></ion-icon>
+                  </button>
+
+                </div>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="card-meta-text">36 lecciones</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <time datetime="PT18H15M44S" class="card-meta-text">18h 15m 44s</time>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3">
+                    <a href="../front-end/descripciones/Construyendo.html" class="card-title">Construyendo un mundo mejor, un estudiante a la vez</a>
+                  </h3>
+
+                  <div class="rating-wrapper">
+
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <span class="rating-text">(18 Visitas)</span>
+
+                  </div>
+                  <button class="add-to-cart-btn" data-course-id="course-1">Agregar al carrito</button>
+
+                  <div class="card-footer">
+
+                    <div class="card-price">
+                      <span class="span">$29.00</span>
+
+                      <del class="del">$39.00</del>
+                    </div>
+
+                    <div class="card-meta-item">
+                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="card-meta-text">91 Estudiantes</span>
+                    </div>
+
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+
+            <li>
+              <div class="course-card">
+
+                <figure class="card-banner">
+                  <img src="./assets/images/course-6.jpg" width="370" height="270" loading="lazy"
+                    alt="Education is About Forming Faithful Disciples" class="img-cover">
+                </figure>
+
+                <div class="card-actions">
+
+                  <span class="badge">Basic</span>
+
+                  <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
+                    <ion-icon name="heart"></ion-icon>
+                  </button>
+
+                </div>
+
+                <div class="card-content">
+
+                  <ul class="card-meta-list">
+
+                    <li class="card-meta-item">
+                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="card-meta-text">21 lecciones</span>
+                    </li>
+
+                    <li class="card-meta-item">
+                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                      <time datetime="PT18H15M44S" class="card-meta-text">18h 15m 44s</time>
+                    </li>
+
+                  </ul>
+
+                  <h3 class="h3">
+                    <a href="../front-end/descripciones/discípulos .html" class="card-title">La educación se trata de formar discípulos fieles</a>
+                  </h3>
+
+                  <div class="rating-wrapper">
+
+                    <div class="rating">
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                      <ion-icon name="star"></ion-icon>
+                    </div>
+
+                    <span class="rating-text">(18 Visitas)</span>
+
+                  </div>
+                  <button class="add-to-cart-btn" data-course-id="course-1">Agregar al carrito</button>
+
+                  <div class="card-footer">
+
+                    <div class="card-price">
+                      <span class="span">$79.00</span>
+
+                      <del class="del">$89.00</del>
+                    </div>
+
+                    <div class="card-meta-item">
+                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+
+                      <span class="card-meta-text">22 Estudiantes</span>
+                    </div>
+
+                  </div>
+  
+                </div>
+              </li>
+  
+            </ul>
+  
+            <a href="curso.html" class="btn btn-primary">
+              <span class="span">Ver Todos los Cursos</span>
+  
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+  
+          </div>
+        </section>
+  
+        <!-- 
+          - #CTA
+        -->
+  
+        <section class="section cta" aria-label="taller" style="background-image: url('./assets/images/cta-bg.png')">
+          <div class="container">
+  
+            <figure class="cta-banner">
+              <img src="./assets/images/cta-banner.jpg" width="580" height="380" loading="lazy" alt="banner de llamada a la acción"
+                class="img-cover">
+            </figure>
+  
+            <div class="cta-content">
+  
+              <p class="section-subtitle">Taller Gratuito</p>
+  
+              <h2 class="h2 section-title">Únete a Nuestros Talleres Gratuitos</h2>
+  
+              <p class="section-text">
+                Nuestro objetivo es permitir que los estudiantes se concentren en el formato y la estructura del diseño, 
+                mientras el contenido final se completa más adelante.
+              </p>
+  
+              <a href="#" class="btn btn-secondary">
+                <span class="span">Próximo Taller</span>
+  
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </a>
+  
+            </div>
+  
+          </div>
+        </section>
+  
+        <!-- 
+          - #EVENTO
+        -->
+  
+        <section class="section event" id="event" aria-label="evento">
+          <div class="container">
+  
+            <p class="section-subtitle">Próximo Evento</p>
+  
+            <h2 class="h2 section-title">Unámonos a Nuestra Comunidad</h2>
+  
+            <ul class="grid-list">
+  
+              <li>
+                <div class="event-card">
+  
+                  <figure class="card-banner">
+                    <img src="./assets/images/event-1.jpg" width="370" height="250" loading="lazy"
+                      alt="Equipo de Innovación y Emprendimiento Tecnológico" class="img-cover">
+                  </figure>
+  
+                  <time class="badge" datetime="2022-12-04">04 Dic 2022</time>
+  
+                  <div class="card-content">
+  
+                    <address class="card-address">
+                      <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+  
+                      <span class="span">Cusco, CA 92805</span>
+                    </address>
+  
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Equipo de Innovación y Emprendimiento Tecnológico</a>
+                    </h3>
+  
+                    <a href="#" class="btn-link">
+                      <span class="span">Obtener Ticket</span>
+  
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+  
+                  </div>
+  
+                </div>
+              </li>
+  
+              <li>
+                <div class="event-card">
+  
+                  <figure class="card-banner">
+                    <img src="./assets/images/event-2.jpg" width="370" height="250" loading="lazy"
+                      alt="Feria Virtual de Empleo a Tiempo Parcial para Estudiantes" class="img-cover">
+                  </figure>
+  
+                  <time class="badge" datetime="2022-10-30">30 Oct 2022</time>
+  
+                  <div class="card-content">
+  
+                    <address class="card-address">
+                      <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+  
+                      <span class="span">Lima, MI 48226</span>
+                    </address>
+  
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Feria Virtual de Empleo a Tiempo Parcial para Estudiantes</a>
+                    </h3>
+  
+                    <a href="#" class="btn-link">
+                      <span class="span">Obtener Ticket</span>
+  
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+  
+                  </div>
+  
+                </div>
+              </li>
+  
+              <li>
+                <div class="event-card">
+  
+                  <figure class="card-banner">
+                    <img src="./assets/images/event-3.jpg" width="370" height="250" loading="lazy"
+                      alt="Exploraciones de la Red de Directores Ejecutivos Regionales" class="img-cover">
+                  </figure>
+  
+                  <time class="badge" datetime="2022-09-18">18 Sep 2022</time>
+  
+                  <div class="card-content">
+  
+                    <address class="card-address">
+                      <ion-icon name="location-outline" aria-hidden="true"></ion-icon>
+  
+                      <span class="span">Piura, PA 17401</span>
+                    </address>
+  
+                    <h3 class="h3">
+                      <a href="#" class="card-title">Exploraciones de la Red de Directores Ejecutivos Regionales</a>
+                    </h3>
+  
+                    <a href="#" class="btn-link">
+                      <span class="span">Obtener Ticket</span>
+  
+                      <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+                    </a>
+  
+                  </div>
+  
+                </div>
+              </li>
+  
+            </ul>
+  
+          </div>
+        </section>
+        <!-- 
+          - #Planes de Suscripción
+        -->
+        <section class="section plans-container" id="plans-container" aria-label="plans-container">
+          <div class="plans-container">
+            <div class="plan" data-plan-id="basic">
+              <h2>Plan Básico</h2>
+              <img src="./assets/images/usuario1.png" alt="Imagen del Plan Básico" class="plan-image1">
+              <p>Costo: 200 soles/año</p>
+              <ul>
+                <li>Acceso a todo el contenido por 1 año</li>
+                <li>Plan para 1 persona</li>
+                <li>Obtener certificados digitales</li>
+                <li>Contenido profesional y actualizado</li>
+              </ul>
+              <button class="add-to-cart-btn" data-plan-name="Plan Básico" data-plan-price="200.00">Agregar al carrito</button>
+            </div>
+        
+            <div class="plan" data-plan-id="expert">
+              <h2>Plan Expert</h2>
+              <img src="./assets/images/seguidores2.png" alt="Imagen del Plan Básico" class="plan-image1">
+              <p>Costo: 350 soles/año (descuento de 50 soles)</p>
+              <ul>
+                <li>Acceso a todo el contenido por 1 año</li>
+                <li>Plan para 2 personas</li>
+                <li>Obtener certificados digitales</li>
+                <li>Contenido profesional y actualizado</li>
+              </ul>
+             <button class="add-to-cart-btn" data-plan-name="Plan Experto" data-plan-price="350.00">Agregar al carrito</button>
+            </div>
+        
+            <div class="plan" data-plan-id="family">
+              <h2>Plan Familiar</h2>
+              <img src="./assets/images/cliente3.png" alt="Imagen del Plan Básico" class="plan-image1">
+              <p>Costo: 500 soles/año (descuento de 300 soles)</p>
+              <ul>
+                <li>Acceso a todo el contenido por 1 año</li>
+                <li>Plan para 3 personas</li>
+                <li>Obtener certificados digitales</li>
+                <li>Contenido profesional y actualizado</li>
+              </ul>
+                <button class="add-to-cart-btn" data-plan-name="Plan Familiar" data-plan-price="500.00">Agregar al carrito</button>
+             </div>
+          </div>
+        </section>
+
+        <!-- 
+          - #BOLETÍN
+        -->
+  
+        <section class="section newsletter" id="newsletter" aria-label="boletín"
+          style="background-image: url('./assets/images/newsletter-bg.jpg')">
+          <div class="container">
+  
+            <p class="section-subtitle">Suscríbete a GuimarBot</p>
+  
+            <h2 class="h2 section-title">Recibe las Últimas Noticias</h2>
+  
+            <form action="" class="newsletter-form">
+  
+              <div class="input-wrapper">
+                <input type="email" name="email_address" aria-label="correo" placeholder="Ingresa tu dirección de correo" required
+                  class="email-field">
+  
+                <ion-icon name="mail-open-outline" aria-hidden="true"></ion-icon>
+              </div>
+  
+              <button type="submit" class="btn btn-primary">
+                <span class="span">Suscribirse</span>
+  
+                <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+              </button>
+  
+            </form>
+  
+          </div>
+        </section>
+  
+      </article>
+    </main>
+  
+    <!-- 
+      - #PIE DE PÁGINA
+    -->
+  
+    <footer class="footer">
+      <div class="container">
+  
+        <div class="footer-top">
+  
+          <div class="footer-brand">
+  
+            <a href="#" class="logo">GuimarBot</a>
+  
+            <p class="section-text">
+              Es bien sabido que los lectores tienden a distraerse con el contenido visible de una página al analizar su diseño.
+            </p>
+  
+            <ul class="social-list">
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
+  
+            </ul>
+  
+          </div>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Explorar</p>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Sobre Nosotros</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Eventos Próximos</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Blog y Noticias</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Preguntas Frecuentes</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Testimonios</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Política de Privacidad</span>
+              </a>
+            </li>
+  
+          </ul>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Contacto</p>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Contacto</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Ubicación</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Soporte</span>
+              </a>
+            </li>
+  
+          </ul>
+  
+        </div>
+
+  
+      </div>
+    </footer>
+
+
+
+
+  <!-- 
+    - #BACK TO TOP
+  -->
+
+  <a href="#top" class="back-top-btn" aria-label="Back to top" data-back-top-btn>
+    <ion-icon name="arrow-up"></ion-icon>
+  </a>
+
+
+
+
+
+  <!-- 
+    - custom js link
+  -->
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>

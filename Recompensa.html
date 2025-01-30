@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Cambiado a español -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GuimarBot</title> <!-- Título modificado -->
+
+  <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+
+  <link id="theme-style" rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/recompensas.css">
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- 
+    - preload images
+  -->
+  <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER
+  -->
+
+  <header class="header" data-header>
+    <div class="container">
+      <h1>
+        <a href="#" class="logo">GuimarBot</a>
+      </h1>
+
+      <nav class="navbar" data-navbar>
+        <div class="navbar-top">
+          <a href="#" class="logo">GuimarBot</a>
+
+          <button class="nav-close-btn" aria-label="Cerrar menú" data-nav-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+        </div>
+
+        <ul class="navbar-list">
+          <li class="navbar-item">
+            <a href="#home" class="navbar-link" data-nav-toggler>Inicio</a> <!-- Cambiado a español -->
+          </li>
+          <li class="navbar-item">
+            <a href="#about" class="navbar-link" data-nav-toggler>Acerca de</a> <!-- Cambiado a español -->
+          </li>
+          <li class="navbar-item">
+            <a href="#courses" class="navbar-link" data-nav-toggler>Cursos</a> <!-- Cambiado a español -->
+          </li>
+          <li class="navbar-item">
+            <a href="#event" class="navbar-link" data-nav-toggler>Eventos</a> <!-- Cambiado a español -->
+          </li>
+          <li class="navbar-item">
+            <a href="#plans-container" class="navbar-link" data-nav-toggler>Planes de Suscripción</a>
+          </li>
+          <li class="navbar-item"></li>
+            <a href="Postular.html" class="navbar-link" data-nav-toggler>Postular Beca</a> <!-- Cambiado a español -->
+          </li>
+          <li class="navbar-item">
+            <a href="#newsletter" class="navbar-link" data-nav-toggler>Contacto</a> <!-- Cambiado a español -->
+          </li>
+        </ul>
+
+      </nav>
+
+      <div class="header-actions">
+        <button class="header-action-btn" aria-label="Abrir búsqueda" data-search-toggler>
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+
+        <!-- Botón del carrito -->
+        <button class="header-action-btn" aria-label="Carrito-Compra" id="mostrar-carrito">
+          <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+          <span id="cart-count" class="cart-count">0</span>
+        </button>
+        <!-- Botón de Racha (Streak Button) -->
+        <button class="header-action-btn racha-btn" aria-label="Racha-Diaria" id="mostrar-racha" onclick="window.location.href='Recompensa.html'">
+          <ion-icon name="flame-outline" aria-hidden="true"></ion-icon>
+        </button>
+        <div id="cart-dropdown" class="cart-dropdown hidden">
+          <table id="lista-carrito" class="cart-table">
+            <thead>
+              <tr>
+                <th>Imagen</th>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Cantidad</th>
+                <th>Eliminar</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+
+          <div class="cart-footer">
+            <button id="vaciar-carrito" class="btn btn-primary">Vaciar carrito</button>
+            <p id="total-precio" class="total-precio">Total: $0.00</p>
+            <button id="pagar-carrito" class="btn btn-primary" onclick="window.location.href='login.html'" >Pagar</button>
+          </div>
+          
+        </div>
+
+
+
+
+        <a href="#" class="header-action-btn login-btn">
+          <img src="./assets/images/usuario.png" alt="Perfil" class="profile-image2" />
+          <span class="span">Miguelito123</span>
+        </a>
+        
+        <!-- Menú -->
+        <div class="dropdown-menu">
+          <a href="Ingreso-usuario.html" class="dropdown-item">Inicio</a>
+          <a href="Ingreso-usuario.html#courses" class="dropdown-item">Mis cursos</a>
+          <a href="#" id="change-background" class="dropdown-item">Cambiar Fondo</a>
+        
+          <!-- Submenú -->
+          <div class="submenu" id="background-submenu">
+            <a href="#" class="dropdown-item" id="niños-btn">Niños</a>
+            <a href="#" class="dropdown-item" id="adolescentes-btn">Adolescentes</a>
+            <a href="#" class="dropdown-item" id="adultos-btn">Adultos</a>
+          </div>
+        
+          <a href="Ajustes-perfil.html" class="dropdown-item">Ajustes</a>
+          <a href="index.html" class="dropdown-item">Cerrar sesión</a>
+        </div>
+        
+
+
+
+        <button class="header-action-btn nav-open-btn" aria-label="Abrir menú" data-nav-toggler>
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+
+      <div class="overlay" data-nav-toggler data-overlay></div>
+    </div>
+  </div>
+
+  </header>
+
+  <!--   - #SEARCH BOX -->
+  <div class="search-container" data-search-box>
+    <div class="container">
+      <button class="search-close-btn" aria-label="Cerrar búsqueda" data-search-toggler>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="search-wrapper">
+        <input type="search" name="search" placeholder="Buscar aquí..." aria-label="Buscar" class="search-field">
+        <button class="search-submit" aria-label="Enviar" data-search-toggler>
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+  <main>
+   
+    <article>
+        
+      <!-- 
+      - #HERO-->
+      <section class="hero" id="home" aria-label="hero" style="background-image: url('./assets/images/adultos.png');">
+        <div class="usuario" style="background-color: var(--ultramarine-blue);">
+            <div class="user-info">
+                <h2 class="user-name">Hola Ernesto</h2>
+                <p class="user-level">Nivel 1</p>
+            </div>
+            <div class="points-info">
+                <div class="points-section">
+                    <img src="./assets/images/about-icon-3.png" alt="Imagen de puntos" class="points-image">
+                    <div class="points-text">
+                        <p class="points-label">Puntos disponibles :</p>
+                        <p class="points-value">455</p>
+                    </div>
+                </div>
+                <div class="streak-section">
+                    <img src="./assets/images/taza.png" alt="Imagen de rachas" class="streak-image">
+                    <div class="streak-text">
+                        <p class="streak-label">Recuento de rachas :</p>
+                        <p class="streak-value">10</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="filter">
+          <div class="age-buttons">
+              <button class="age-btn active" onclick="showCards('ganar')">Ganar</button>
+              <button class="age-btn" onclick="showCards('canjear')">Canjear</button>
+          </div>
+      </div>
+      
+      <h2 class="section-title">Retos Diarios:</h2>
+      
+      <div class="container">
+          <div class="cards-container" id="ganar-content">
+              <!-- Contenido para Ganar -->
+              <div class="card">
+                  <div class="card-content">
+                      <img src="./assets/images/tareas.png" alt="Curso 1" class="card-image">
+                      <div class="card-text">
+                          <p class="card-title">Futuro Acuña :</p>
+                          <p class="card-description">Responde 30 preguntas de cultura general</p>
+                          <div class="points">
+                              <p>100 puntos</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-content">
+                      <img src="./assets/images/tareas.png" alt="Curso 2" class="card-image">
+                      <div class="card-text">
+                          <p class="card-title">Ingeniero Bailarin :</p>
+                          <p class="card-description">Baila 3 danzas típicas de ingenieros</p>
+                          <div class="points">
+                              <p>150 puntos</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card">
+                  <div class="card-content">
+                      <img src="./assets/images/tareas.png" alt="Curso 3" class="card-image">
+                      <div class="card-text">
+                          <p class="card-title">San Marquinense :</p>
+                          <p class="card-description">Derrocar a la rectora de la UNMSM</p>
+                          <div class="points">
+                              <p>2000 puntos</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      
+          <div class="cards-container" id="canjear-content" style="display: none;">
+              <!-- Contenido para Canjear -->
+              <div class="card visible">
+                  <div class="card-content">
+                      <img src="./assets/images/tareas.png" alt="Curso 1" class="card-image">
+                      <div class="card-text">
+                          <p class="card-title">Futuro Acuña :</p>
+                          <p class="card-description">Responde 30 preguntas de cultura general</p>
+                          <div class="points">
+                              <p>100 puntos</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card visible">
+                  <div class="card-content">
+                      <img src="./assets/images/tareas.png" alt="Curso 2" class="card-image">
+                      <div class="card-text">
+                          <p class="card-title">Ingeniero Bailarin :</p>
+                          <p class="card-description">Baila 3 danzas típicas de ingenieros</p>
+                          <div class="points">
+                              <p>150 puntos</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card visible">
+                  <div class="card-content">
+                      <img src="./assets/images/tareas.png" alt="Curso 3" class="card-image">
+                      <div class="card-text">
+                          <p class="card-title">San Marquinense :</p>
+                          <p class="card-description">Derrocar a la rectora de la UNMSM</p>
+                          <div class="points">
+                              <p>2000 puntos</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- Nuevas filas agregadas -->
+              <div class="card" style="display: none;">
+                  <div class="card-content">
+                      <img src="./assets/images/tareas.png" alt="Curso 4" class="card-image">
+                      <div class="card-text">
+                          <p class="card-title">Reto de Matemáticas :</p>
+                          <p class="card-description">Resuelve 10 problemas de matemáticas</p>
+                          <div class="points">
+                              <p>250 puntos</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card" style="display: none;">
+                  <div class="card-content">
+                      <img src="./assets/images/tareas.png" alt="Curso 5" class="card-image">
+                      <div class="card-text">
+                          <p class="card-title">Desafío de Historia :</p>
+                          <p class="card-description">Contesta 5 preguntas de historia</p>
+                          <div class="points">
+                              <p>300 puntos</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card" style="display: none;">
+                  <div class="card-content">
+                      <img src="./assets/images/tareas.png" alt="Curso 6" class="card-image">
+                      <div class="card-text">
+                          <p class="card-title">Concurso de Ciencias :</p>
+                          <p class="card-description">Participa en un concurso de ciencias</p>
+                          <div class="points">
+                              <p>400 puntos</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="card" style="display: none;">
+                  <div class="card-content">
+                      <img src="./assets/images/tareas.png" alt="Curso 7" class="card-image">
+                      <div class="card-text">
+                          <p class="card-title">Ciencia y Tecnología :</p>
+                          <p class="card-description">Participa en un proyecto de tecnología</p>
+                          <div class="points">
+                              <p>500 puntos</p>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+      
+              <!-- Botón para cargar más filas -->
+              <div style="text-align: center; margin-top: 20px;">
+                  <button id="load-more" onclick="loadMore()">Cargar más</button>
+              </div>
+          </div>
+      </div>
+      
+      
+    </section>
+    
+      <section>
+        <div class="streak-container" style="background-color: var(--ultramarine-blue);">
+          <h2>Camino de Racha</h2>
+          <div class="streak-wrapper">
+            <!-- Línea centrada con círculos numerados de la racha -->
+            <div class="streak">
+              <div class="streak-steps">
+                <div class="step">1</div>
+                <div class="step">2</div>
+                <div class="step">3</div>
+              </div>
+            </div>
+          </div>
+          <!-- Espacio para la imagen -->
+          <div class="image-space">
+            <img src="./assets/images/cofre.png" alt="Descripción de la imagen" style="display: block; margin: 20px auto; width: 50%; max-width: 150px;">
+          </div>
+          
+          <!-- Texto debajo de la imagen -->
+          <p class="image-text" style="color: #fff; text-align: center; margin-top: 10px;">Completa el conjunto de actividades de hoy para empezar una nueva racha. Una racha de 3 días desbloqueará 45 puntos de bonificación.</p>
+          <!-- Botón debajo del texto -->
+          <div class="button-container" style="text-align: center; margin-top: 20px; display: flex; justify-content: center;">
+            <button class="accion">Recolectar</button>
+          </div>          
+        </div>
+      </section>
+    
+      </article>
+    </main>
+
+    <!-- 
+      - #PIE DE PÁGINA
+    -->
+  
+    <footer class="footer">
+      <div class="container">
+  
+        <div class="footer-top">
+  
+          <div class="footer-brand">
+  
+            <a href="#" class="logo">GuimarBot</a>
+  
+            <p class="section-text">
+              Es bien sabido que los lectores tienden a distraerse con el contenido visible de una página al analizar su diseño.
+            </p>
+  
+            <ul class="social-list">
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
+  
+            </ul>
+  
+          </div>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Explorar</p>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Sobre Nosotros</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Eventos Próximos</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Blog y Noticias</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Preguntas Frecuentes</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Testimonios</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Política de Privacidad</span>
+              </a>
+            </li>
+  
+          </ul>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Contacto</p>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Contacto</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Ubicación</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Soporte</span>
+              </a>
+            </li>
+  
+          </ul>
+  
+        </div>
+
+  
+      </div>
+    </footer>
+
+      
+    <script src="./assets/js/recompensa.js"></script>
+    <script src="./assets/js/editarjsscript.js"></script>
+    <script src="./assets/js/script.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="./assets/js/re" defer></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

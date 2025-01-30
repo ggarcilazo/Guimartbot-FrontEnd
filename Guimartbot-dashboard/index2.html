@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guimartbot - Resumen</title>
+    <!-- Importar Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <!-- Importar Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- CSS Personalizado -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Importar Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Guimartbot</h2>
+            <nav>
+                <ul>
+                    <li><a href="index2.html"><i class="fas fa-home"></i> Resumen</a></li>
+                    <li><a href="bandeja_entrada.html"><i class="fas fa-inbox"></i> Bandeja de Entrada</a></li>
+                    <li><a href="usuarios.html"><i class="fas fa-users"></i> Usuarios</a></li>
+                    <li><a href="docentes.html"><i class="fas fa-chalkboard-teacher"></i> Docentes</a></li>
+                    <li><a href="cursos.html"><i class="fas fa-book"></i> Cursos</a></li> <!-- Nueva línea agregada -->
+                    <li><a href="certificados.html"><i class="fas fa-certificate"></i> Certificados</a></li>
+                    <li><a href="becas.html"><i class="fas fa-graduation-cap"></i> Becas</a></li>
+                    <li><a href="pagos.html"><i class="fas fa-money-bill-wave"></i> Pagos</a></li>
+                    <li><a href="recursos.html"><i class="fas fa-book"></i> Recursos</a></li>
+                    <li><a href="administradores.html"><i class="fas fa-user-shield"></i> Administradores</a></li>
+
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="content">
+            <h1>Resumen</h1>
+
+            <!-- Tarjetas de resumen -->
+            <section class="stats-cards">
+                <div class="card">
+                    <h3 class="section-title">Total de Usuarios</h3>
+                    <p>1,200</p>
+                </div>
+                <div class="card">
+                    <h3 class="section-title">Docentes Activos</h3>
+                    <p>85</p>
+                </div>
+                <div class="card">
+                    <h3 class="section-title">Certificados Emitidos</h3>
+                    <p>350</p>
+                </div>
+                <div class="card">
+                    <h3 class="section-title">Cursos Disponibles</h3>
+                    <p>50</p>
+                </div>
+            </section>
+
+            <!-- Gráficos en contenedores separados -->
+            <section class="charts">
+                <div class="chart-container card" style="flex: 1 1 45%; height: 400px; position: relative;">
+                    <h2 class="section-title">Becas Aprobadas por Mes</h2>
+                    <canvas id="lineChart" style="width: 100%; height: 100%;"></canvas>
+                </div>
+                <div class="chart-container card" style="flex: 1 1 45%; height: 400px; position: relative;">
+                    <h2 class="section-title">Distribución de Estudiantes</h2>
+                    <canvas id="pieChart" style="width: 100%; height: 100%;"></canvas>
+                </div>
+            </section>
+
+            <!-- Tablas adicionales -->
+            <section class="data-tables">
+                <div class="table-container card">
+                    <h2 class="section-title">Últimos Usuarios Registrados</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Email</th>
+                                <th>Fecha de Registro</th>
+                                <th>Plan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ana Gómez</td>
+                                <td>ana@example.com</td>
+                                <td>2023-10-25</td>
+                                <td>Plan Básico</td>
+                            </tr>
+                            <tr>
+                                <td>Juan Pérez</td>
+                                <td>juan@example.com</td>
+                                <td>2023-10-24</td>
+                                <td>Plan Expert</td>
+                            </tr>
+                            <tr>
+                                <td>María Díaz</td>
+                                <td>maria@example.com</td>
+                                <td>2023-10-23</td>
+                                <td>Plan Familiar</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-container card">
+                    <h2 class="section-title">Pagos Recientes</h2>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ID Pago</th>
+                                <th>Usuario</th>
+                                <th>Monto</th>
+                                <th>Fecha</th>
+                                <th>Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>12345</td>
+                                <td>Ana Gómez</td>
+                                <td>S/ 200</td>
+                                <td>2023-10-25</td>
+                                <td>Completado</td>
+                            </tr>
+                            <tr>
+                                <td>12346</td>
+                                <td>Juan Pérez</td>
+                                <td>S/ 350</td>
+                                <td>2023-10-24</td>
+                                <td>Pendiente</td>
+                            </tr>
+                            <tr>
+                                <td>12347</td>
+                                <td>María Díaz</td>
+                                <td>S/ 500</td>
+                                <td>2023-10-23</td>
+                                <td>Completado</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Importar JavaScript de Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Archivo de JavaScript personalizado -->
+    <script src="js/responsive.js"></script>
+
+    <!-- Archivo de gráficos -->
+    <script src="js/charts.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Cursos - Guimartbot</title>
+    <link rel="stylesheet" href="css/cursos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Guimartbot</h2>
+            <nav>
+                <ul>
+                    <li><a href="index2.html"><i class="fas fa-home"></i> Resumen</a></li>
+                    <li><a href="bandeja_entrada.html"><i class="fas fa-inbox"></i> Bandeja de Entrada</a></li>
+                    <li><a href="usuarios.html"><i class="fas fa-users"></i> Usuarios</a></li>
+                    <li><a href="docentes.html"><i class="fas fa-chalkboard-teacher"></i> Docentes</a></li>
+                    <li><a href="cursos.html"><i class="fas fa-book"></i> Cursos</a></li> <!-- Nueva línea agregada -->
+                    <li><a href="certificados.html"><i class="fas fa-certificate"></i> Certificados</a></li>
+                    <li><a href="becas.html"><i class="fas fa-graduation-cap"></i> Becas</a></li>
+                    <li><a href="pagos.html"><i class="fas fa-money-bill-wave"></i> Pagos</a></li>
+                    <li><a href="recursos.html"><i class="fas fa-book"></i> Recursos</a></li>
+                    <li><a href="administradores.html"><i class="fas fa-user-shield"></i> Administradores</a></li>
+                    
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Contenido Principal -->
+        <main class="content">
+            <h1>Cursos</h1>
+
+            <!-- Barra de búsqueda y botón de añadir -->
+            <div class="curso-controls">
+                <input type="text" placeholder="Buscar cursos..." class="search-bar" oninput="filterCursos()">
+                <button class="add-curso-button" onclick="showAddCursoModal()"><i class="fas fa-plus"></i> Añadir Curso</button>
+            </div>
+
+            <!-- Tabla de cursos -->
+            <section class="curso-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre del Curso</th>
+                            <th>Descripción</th>
+                            <th>Duración</th>
+                            <th>Modalidad</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cursoTableBody">
+                        <tr>
+                            <td>Matemáticas Avanzadas</td>
+                            <td>Curso de álgebra y cálculo</td>
+                            <td>3 meses</td>
+                            <td>Online</td>
+                            <td>
+                                <button class="action-button edit" onclick="showEditCursoModal('Matemáticas Avanzadas', 'Curso de álgebra y cálculo', '3 meses', 'Online')"><i class="fas fa-edit"></i></button>
+                                <button class="action-button delete" onclick="deleteCurso(this)"><i class="fas fa-trash"></i></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal para añadir/editar curso -->
+    <div class="modal" id="cursoModal">
+        <div class="modal-content">
+            <span class="close-button" onclick="hideCursoModal()">&times;</span>
+            <h3 id="modalTitle">Añadir Nuevo Curso</h3>
+            <form id="cursoForm">
+                <input type="text" id="cursoName" placeholder="Nombre del Curso" required>
+                <textarea id="cursoDescription" placeholder="Descripción" required></textarea>
+                <input type="text" id="cursoDuration" placeholder="Duración" required>
+                <select id="cursoModality" required>
+                    <option value="Online">Online</option>
+                    <option value="Presencial">Presencial</option>
+                </select>
+                <button type="submit" class="send-button">Guardar Curso</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/cursos.js"></script>
+</body>
+</html>

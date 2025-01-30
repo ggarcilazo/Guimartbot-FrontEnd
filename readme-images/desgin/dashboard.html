@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="../desgin/images/SVG_cabezabot.svg" type="image/svg+xml">
+   <title>GuimarBot</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+   <link rel="stylesheet" href="../desgin/css/style.css">
+   <link rel="stylesheet" href="../desgin/css/dashboard.css"> 
+</head>
+<body>
+   <header class="header">
+      <section class="flex">
+         <a href="home.html" class="logo">GuimarBot</a>
+
+         <form action="search.html" method="post" class="search-form">
+            <input type="text" name="search_box" required placeholder="buscar cursos..." maxlength="100">
+            <button type="submit" class="fas fa-search"></button>
+         </form>
+
+         <div class="icons">
+            <div id="menu-btn" class="fas fa-bars"></div>
+            <div id="search-btn" class="fas fa-search"></div>
+            <div id="user-btn" class="fas fa-user"></div>
+            <div id="toggle-btn" class="fas fa-sun"></div>
+         </div>
+
+         <div class="profile">
+            <img src="../desgin/images/pic-1.jpg" class="image" alt="">
+            <h3 class="name">Administrador</h3>
+            <p class="role">Panel de Control</p>
+            <a href="profile.html" class="btn">Ver perfil</a>
+         </div>
+      </section>
+   </header>
+   <div class="side-bar">
+      <div id="close-btn">
+         <i class="fas fa-times"></i>
+      </div>
+
+      <div class="profile">
+         <img src="../desgin/images/pic-1.jpg" class="image" alt="">
+         <h3 class="name">Administrador</h3>
+         <p class="role">Panel de Control</p>
+         <a href="profile.html" class="btn">Ver perfil</a>
+      </div>
+
+      <nav class="navbar">
+        <a href="dashboard.html"><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a>
+        <a href="home.html"><i class="fas fa-home"></i><span>Inicio</span></a>
+        <a href="about.html"><i class="fas fa-question"></i><span>Acerca de nosotros</span></a>
+        <a href="courses.html"><i class="fas fa-graduation-cap"></i><span>Cursos</span></a>
+        <a href="teachers.html"><i class="fas fa-chalkboard-user"></i><span>Maestros</span></a>
+        <a href="contact.html"><i class="fas fa-headset"></i><span>Contáctanos</span></a>
+        <a href="pagos.html"><i class="fas fa-wallet"></i><span>Pagos</span></a>
+      </nav>
+   </div>
+   <section class="dashboard-content">
+      <div class="dashboard-header">
+         <h1>Panel de Control</h1>
+         <p>Bienvenido al panel de administrador. Aquí puedes gestionar todos los aspectos del sitio web.</p>
+      </div>
+      <div class="stats-container">
+         <div class="stats-card">
+            <i class="fas fa-users"></i>
+            <h3>Usuarios</h3>
+            <p>1500</p>
+         </div>
+         <div class="stats-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Cursos</h3>
+            <p>120</p>
+         </div>
+         <div class="stats-card">
+            <i class="fas fa-comments"></i>
+            <h3>Comentarios</h3>
+            <p>300</p>
+         </div>
+         <div class="stats-card">
+            <i class="fas fa-video"></i>
+            <h3>Videos</h3>
+            <p>50</p>
+         </div>
+      </div>
+      <div class="quick-links">
+         <h2>Accesos Rápidos</h2>
+         <div class="quick-link-container">
+            <div class="quick-link">
+               <a href="manage-users.html">
+                  <i class="fas fa-users"></i>
+                  <span>Gestionar Usuarios</span>
+               </a>
+            </div>
+            <div class="quick-link">
+               <a href="manage-courses.html">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>Gestionar Cursos</span>
+               </a>
+            </div>
+            <div class="quick-link">
+               <a href="manage-comments.html">
+                  <i class="fas fa-comments"></i>
+                  <span>Gestionar Comentarios</span>
+               </a>
+            </div>
+            <div class="quick-link">
+               <a href="manage-videos.html">
+                  <i class="fas fa-video"></i>
+                  <span>Gestionar Videos</span>
+               </a>
+            </div>
+         </div>
+      </div>
+      <div class="latest-activity">
+         <h2>Últimas Actividades</h2>
+         <ul>
+            <li><i class="fas fa-user"></i> Nuevo usuario registrado: <strong>Hector Caballero</strong></li>
+            <li><i class="fas fa-graduation-cap"></i> Curso creado: <strong>Introducción a HTML</strong></li>
+            <li><i class="fas fa-comments"></i> Nuevo comentario en <strong>Curso de JavaScript</strong></li>
+            <li><i class="fas fa-video"></i> Video subido: <strong>HTML para Principiantes - Parte 1</strong></li>
+         </ul>
+      </div>
+
+   </section>
+   <script src="js/script.js"></script>
+</body>
+</html>

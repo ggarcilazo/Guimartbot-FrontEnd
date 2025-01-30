@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas</title>
+    <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/styles1.css">
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+          <h1>
+            <a href="#" class="logo">GuimarBot</a>
+          </h1>
+    
+          <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+              <a href="#" class="logo">GuimarBot</a>
+    
+              <button class="nav-close-btn" aria-label="Cerrar menú" data-nav-toggler>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+    
+            <ul class="navbar-list"> 
+              <li class="navbar-item">
+                <a href="index.html#home" class="navbar-link" data-nav-toggler>Inicio</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#about" class="navbar-link" data-nav-toggler>Acerca de</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#courses" class="navbar-link" data-nav-toggler>Cursos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#event" class="navbar-link" data-nav-toggler>Eventos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#plans-container" class="navbar-link" data-nav-toggler>Planes de Suscripción</a>
+              </li>
+              <li class="navbar-item"></li>
+                <a href="Postular.html" class="navbar-link" data-nav-toggler>Postular Beca</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#newsletter" class="navbar-link" data-nav-toggler>Contacto</a> <!-- Cambiado a español -->
+              </li>
+            </ul>
+    
+            
+          </nav>
+    
+          <div class="header-actions">
+            <button class="header-action-btn" aria-label="Abrir búsqueda" data-search-toggler>
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+    
+            <!-- Botón del carrito -->
+            <button class="header-action-btn" aria-label="Carrito-Compra" id="mostrar-carrito">
+              <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+              <span id="cart-count" class="cart-count">0</span>
+            </button>
+    
+            
+            <div id="cart-dropdown" class="cart-dropdown hidden">
+              <table id="lista-carrito" class="cart-table">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+    
+              <div class="cart-footer">
+                <button id="vaciar-carrito" class="btn btn-primary">Vaciar carrito</button>
+                <p id="total-precio" class="total-precio">Total: $0.00</p>
+                <button id="pagar-carrito" class="btn btn-primary" onclick="window.location.href='pago.html'" >Pagar</button>
+              </div>
+              
+            </div>
+    
+            <a href="#" class="header-action-btn login-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+              <span class="span">Iniciar sesión / Registrarse</span> <!-- Cambiado a español -->
+            </a>
+    
+            <button class="header-action-btn nav-open-btn" aria-label="Abrir menú" data-nav-toggler>
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+    
+          <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+      </div>
+    
+      </header>
+
+<body>
+  <div class="main-section">
+    <!-- Información de la Profesora -->
+    <div class="professor-info">
+      <img src="./assets/images/tea.jpg" alt="Profesora" class="professor-image">
+      <div class="professor-details">
+        <h3>María López</h3>
+        <p>Especialista en Programación Creativa</p>
+        <p>Imparte clases de programación con un enfoque práctico y divertido, ideal para principiantes y avanzados.</p>
+      </div>
+    </div>
+
+    <!-- Información del Curso -->
+    <div class="course-info">
+      <h1>Curso de Programación Divertida</h1>
+      <p>Descubre el mundo de la programación de una forma divertida y creativa. Este curso está diseñado para que aprendas a programar a través de proyectos interactivos y juegos.</p>
+      <div class="course-details">
+        <div class="requirements">
+          <h3>Conocimientos Previos</h3>
+          <ul>
+            <li>Ninguno, el curso es apto para principiantes.</li>
+          </ul>
+          <h3>Software y Recursos</h3>
+          <ul>
+            <li>Editor de código (Visual Studio Code, Sublime Text)</li>
+            <li>Python 3</li>
+            <li>Bibliotecas como Pygame y Tkinter</li>
+            <li>Simuladores de juegos</li>
+            <li>Proyectos</li>
+            <li>Aprendizaje interactivo</li>
+          </ul>
+        </div>
+        <div class="certificate">
+          <h3>Certificado</h3>
+          <p>Al finalizar el curso, recibirás un certificado que valida tus habilidades en programación creativa y divertida.</p>
+          <img src="./assets/images/PARA EL VIDEO.png" alt="Certificado">
+        </div>
+      </div>
+    </div>
+</div>
+
+
+  <!-- Cursos relacionados -->
+  <section class="section course" id="courses" aria-label="course">
+    <div class="container">
+  
+      <ul class="grid-list">
+  
+        <li>
+          <div class="course-card">
+  
+            <figure class="card-banner">
+              <img src="./assets/images/pyto.jpg" width="370" height="270" loading="lazy"
+                alt="Programación Creativa con Python" class="img-cover">
+            </figure>
+  
+            <div class="card-actions">
+  
+              <span class="badge">Intermedio</span>
+  
+              <button class="whishlist-btn" aria-label="Add to wishlist" data-whish-btn>
+                <ion-icon name="heart"></ion-icon>
+              </button>
+  
+            </div>
+  
+            <div class="card-content">
+  
+              <ul class="card-meta-list">
+  
+                <li class="card-meta-item">
+                  <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                  <span class="card-meta-text">40 lecciones</span>
+                </li>
+  
+                <li class="card-meta-item">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  <time datetime="PT10H30M">10h 30m</time>
+                </li>
+  
+              </ul>
+  
+              <h3 class="h3">
+                <a href="#" class="card-title">Programación Creativa con Python</a>
+              </h3>
+  
+              <div class="rating-wrapper">
+                <div class="rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                </div>
+                <span class="rating-text">(25 Opiniones)</span>
+              </div>
+  
+            </div>
+  
+          </div>
+        </li>
+  
+        <li>
+          <div class="course-card">
+  
+            <figure class="card-banner">
+              <img src="./assets/images/games.jpg" width="370" height="270" loading="lazy"
+                alt="Creación de Videojuegos con Pygame" class="img-cover">
+            </figure>
+  
+            <div class="card-actions">
+  
+              <span class="badge">Avanzado</span>
+  
+              <button class="whishlist-btn" aria-label="Add to wishlist" data-whish-btn>
+                <ion-icon name="heart"></ion-icon>
+              </button>
+  
+            </div>
+  
+            <div class="card-content">
+  
+              <ul class="card-meta-list">
+  
+                <li class="card-meta-item">
+                  <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                  <span class="card-meta-text">50 lecciones</span>
+                </li>
+  
+                <li class="card-meta-item">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  <time datetime="PT15H45M">15h 45m</time>
+                </li>
+  
+              </ul>
+  
+              <h3 class="h3">
+                <a href="#" class="card-title">Creación de Videojuegos con Pygame</a>
+              </h3>
+  
+              <div class="rating-wrapper">
+                <div class="rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+                <span class="rating-text">(32 Opiniones)</span>
+              </div>
+  
+            </div>
+  
+          </div>
+        </li>
+  
+        <li>
+          <div class="course-card">
+  
+            <figure class="card-banner">
+              <img src="./assets/images/inetera.jpg" width="370" height="270" loading="lazy"
+                alt="Introducción a la Programación Interactiva con Tkinter" class="img-cover">
+            </figure>
+  
+            <div class="card-actions">
+  
+              <span class="badge">Básico</span>
+  
+              <button class="whishlist-btn" aria-label="Add to wishlist" data-whish-btn>
+                <ion-icon name="heart"></ion-icon>
+              </button>
+  
+            </div>
+  
+            <div class="card-content">
+  
+              <ul class="card-meta-list">
+  
+                <li class="card-meta-item">
+                  <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                  <span class="card-meta-text">30 lecciones</span>
+                </li>
+  
+                <li class="card-meta-item">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  <time datetime="PT8H20M">8h 20m</time>
+                </li>
+  
+              </ul>
+  
+              <h3 class="h3">
+                <a href="#" class="card-title">Introducción a la Programación Interactiva con Tkinter</a>
+              </h3>
+  
+              <div class="rating-wrapper">
+                <div class="rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </div>
+                <span class="rating-text">(18 Opiniones)</span>
+              </div>
+  
+            </div>
+  
+          </div>
+        </li>
+  
+      </ul>
+    </div>
+  </section>
+  
+   <!-- Opiniones -->
+<section class="course-reviews">
+  <h2>Opiniones del Curso</h2>
+  <div class="review-summary">
+    <p>⭐ 4.8 - 452 opiniones</p>
+  </div>
+  <div class="reviews">
+    <div class="review">
+      <p><strong>Camila Hernández</strong> ⭐⭐⭐⭐⭐</p>
+      <p>La profesora María López explica de manera muy dinámica y hace que la programación sea realmente divertida.</p>
+    </div>
+    <div class="review">
+      <p><strong>Andrés Silva</strong> ⭐⭐⭐⭐⭐</p>
+      <p>Me encantó su forma de enseñar, especialmente los proyectos prácticos que nos permitieron aplicar lo aprendido.</p>
+    </div>
+    <!-- Más opiniones -->
+    <div class="extra-reviews">
+      <div class="review">
+        <p><strong>Sofía Martínez</strong> ⭐⭐⭐⭐</p>
+        <p>Excelente curso, aunque me hubiera gustado que incluyera más ejemplos para principiantes.</p>
+      </div>
+      <div class="review">
+        <p><strong>Diego Ramírez</strong> ⭐⭐⭐⭐⭐</p>
+        <p>María es una profesora excepcional. Su pasión por la programación es contagiosa y motivadora.</p>
+      </div>
+      <div class="review">
+        <p><strong>Lucía Torres</strong> ⭐⭐⭐⭐⭐</p>
+        <p>La profesora hace que temas complejos parezcan sencillos. Sus ejemplos interactivos son geniales.</p>
+      </div>
+    </div>
+  </div>
+  <button id="load-more" class="load-more">Ver más comentarios</button>
+</section>
+
+</html>
+<script src="./assets/js/script1.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

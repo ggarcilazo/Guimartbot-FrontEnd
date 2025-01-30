@@ -1,0 +1,202 @@
+/* General */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--space-cadet-2);
+  line-height: 1.6;
+  background-color: var(--cultured-1);
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  padding-top: 200px; /* Ajusta el espacio superior de todo el contenido */
+  overflow-x: hidden;
+  
+}
+
+h1, h2, h3 {
+  color: var(--ultramarine-blue);
+}
+
+/* Sección principal */
+.main-section {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  background: var(--cultured-1);
+  gap: 20px;
+  max-width: 1200px;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px var(--space-cadet_20);
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Información del Profesor */
+.professor-info {
+  flex: 1;
+  max-width: 300px;
+  text-align: center;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.professor-image {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.professor-image:hover {
+  transform: scale(1.05);
+}
+
+.professor-details {
+  margin-top: 10px;
+  text-align: left;
+}
+
+/* Información del Curso */
+.course-info {
+  flex: 2;
+  padding: 15px;
+  border-radius: 10px;
+  animation: slideIn 1s ease-in-out;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.course-details {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.requirements{
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.certificate {
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.requirements:hover, .certificate:hover {
+  transform: scale(1.05);
+}
+
+.requirements {
+  flex: 0 0 auto; /* Ajuste al contenido */
+  width: auto; /* Ajusta al texto */
+}
+
+.certificate img {
+  width: 80%;
+  margin: 10px auto;
+  display: block;
+  border: 1px solid var(--light-gray);
+  border-radius: 5px;
+}
+/* Opiniones */
+.course-reviews {
+  padding: 20px;
+  background: var(--cultured-1);
+  border-radius: 10px;
+  text-align: left; 
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para mayor profundidad */
+}
+
+.course-reviews h2 {
+  color: var(--space-cadet-2);
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+.review-summary {
+  font-size: 1.2em;
+  color: var(--space-cadet-80);
+  margin-bottom: 20px;
+}
+
+.reviews .review {
+  background-color: var(--white); /* Fondo blanco para las opiniones */
+  margin-bottom: 15px;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover */
+.reviews .review:hover {
+  transform: translateY(-5px); /* Eleva el bloque */
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Sombra más grande al pasar el ratón */
+}
+
+/* Texto dentro de las opiniones */
+.reviews .review p {
+  margin: 10px 0;
+  color: var(--space-cadet-80);
+  font-size: 1em;
+}
+
+.reviews .review strong {
+  color: hsla(0, 0%, 0%, 0.8);
+  font-size: 1.1em;
+}
+
+.reviews .review p:last-child {
+  font-style: italic; /* Resalta el comentario con cursiva */
+}
+
+.load-more {
+  background-color: var(--orange-peel);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 200px;
+  margin: 20px auto;
+  display: block;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.load-more:hover {
+  background-color: var(--tart-orange);
+}
+
+.extra-reviews {
+  display: none;
+}

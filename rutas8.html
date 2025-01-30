@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas</title>
+    <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/styles1.css">
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+          <h1>
+            <a href="#" class="logo">GuimarBot</a>
+          </h1>
+    
+          <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+              <a href="#" class="logo">GuimarBot</a>
+    
+              <button class="nav-close-btn" aria-label="Cerrar menú" data-nav-toggler>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+    
+            <ul class="navbar-list"> 
+              <li class="navbar-item">
+                <a href="index.html#home" class="navbar-link" data-nav-toggler>Inicio</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#about" class="navbar-link" data-nav-toggler>Acerca de</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#courses" class="navbar-link" data-nav-toggler>Cursos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#event" class="navbar-link" data-nav-toggler>Eventos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#plans-container" class="navbar-link" data-nav-toggler>Planes de Suscripción</a>
+              </li>
+              <li class="navbar-item"></li>
+                <a href="Postular.html" class="navbar-link" data-nav-toggler>Postular Beca</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#newsletter" class="navbar-link" data-nav-toggler>Contacto</a> <!-- Cambiado a español -->
+              </li>
+            </ul>
+    
+            
+          </nav>
+    
+          <div class="header-actions">
+            <button class="header-action-btn" aria-label="Abrir búsqueda" data-search-toggler>
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+    
+            <!-- Botón del carrito -->
+            <button class="header-action-btn" aria-label="Carrito-Compra" id="mostrar-carrito">
+              <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+              <span id="cart-count" class="cart-count">0</span>
+            </button>
+    
+            
+            <div id="cart-dropdown" class="cart-dropdown hidden">
+              <table id="lista-carrito" class="cart-table">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+    
+              <div class="cart-footer">
+                <button id="vaciar-carrito" class="btn btn-primary">Vaciar carrito</button>
+                <p id="total-precio" class="total-precio">Total: $0.00</p>
+                <button id="pagar-carrito" class="btn btn-primary" onclick="window.location.href='pago.html'" >Pagar</button>
+              </div>
+              
+            </div>
+    
+            <a href="#" class="header-action-btn login-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+              <span class="span">Iniciar sesión / Registrarse</span> <!-- Cambiado a español -->
+            </a>
+    
+            <button class="header-action-btn nav-open-btn" aria-label="Abrir menú" data-nav-toggler>
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+    
+          <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+      </div>
+    
+      </header>
+
+<body>
+  <div class="main-section">
+    <!-- Información del Profesor -->
+    <div class="professor-info">
+      <img src="./assets/images/lua.png" alt="Profesora Lucia García" class="professor-image">
+      <div class="professor-details">
+        <h3>Lucia García</h3>
+        <p>Especialista en Liderazgo y Dinámicas de Grupo</p>
+        <p>Imparte clases sobre liderazgo, trabajo en equipo y habilidades interpersonales, cubriendo temas como la motivación, resolución de conflictos y gestión de equipos de alto rendimiento.</p>
+      </div>
+    </div>
+
+    <!-- Información del Curso -->
+    <div class="course-info">
+      <h1>Curso de Liderazgo y Trabajo en Equipo: Estrategias para el Éxito</h1>
+      <p>En este curso aprenderás a ser un líder eficaz, cómo construir equipos de alto rendimiento y cómo gestionar de manera exitosa las dinámicas grupales. Desde la teoría del liderazgo hasta las prácticas que aseguran el éxito colaborativo.</p>
+      <div class="course-details">
+        <div class="requirements">
+          <h3>Conocimientos Previos</h3>
+          <ul>
+            <li>Interés en el desarrollo personal y profesional</li>
+            <li>Deseo de mejorar habilidades de comunicación </li>
+          </ul>
+          <h3>Recursos Propuestos por la Profesora</h3>
+          <ul>
+            <li>Libro</li>
+            <li>Simuladores de dinámicas grupales</li>
+            <li>Herramientas interactivas para trabajo en equipo</li>
+            <li>Material de lectura</li>
+            <li>Videos y tutoriales sobre técnicas de liderazgo</li>
+          </ul>
+        </div>
+        <div class="certificate">
+          <h3>Certificado</h3>
+          <p>Al finalizar el curso, recibirás un certificado que valida tus habilidades en liderazgo y trabajo en equipo, demostrando tu capacidad para gestionar equipos y liderar con éxito.</p>
+          <img src="./assets/images/PARA EL VIDEO.jpg" alt="Certificado">
+        </div>
+      </div>
+    </div>
+</div>
+
+  <!-- Cursos relacionados -->
+<section class="section course" id="courses" aria-label="course">
+  <div class="container">
+
+    <ul class="grid-list">
+
+      <li>
+        <div class="course-card">
+
+          <figure class="card-banner">
+            <img src="./assets/images/lider.png" width="370" height="270" loading="lazy"
+              alt="Liderazgo Eficaz en Equipos de Trabajo" class="img-cover">
+          </figure>
+
+          <div class="card-actions">
+
+            <span class="badge">Intermedio</span>
+
+            <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
+              <ion-icon name="heart"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="card-content">
+
+            <ul class="card-meta-list">
+
+              <li class="card-meta-item">
+                <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+
+                <span class="card-meta-text">30 lecciones</span>
+              </li>
+
+              <li class="card-meta-item">
+                <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                <time datetime="PT18H0M0S" class="card-meta-text">18h 0m 0s</time>
+              </li>
+
+            </ul>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">Liderazgo Eficaz en Equipos de Trabajo</a>
+            </h3>
+
+            <div class="rating-wrapper">
+
+              <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+
+              <span class="rating-text">(45 Visitas)</span>
+
+            </div>
+
+          </div>
+
+        </div>
+      </li>
+
+      <li>
+        <div class="course-card">
+
+          <figure class="card-banner">
+            <img src="./assets/images/tra.jpg" width="370" height="270" loading="lazy"
+              alt="Trabajo en Equipo: Cómo Crear Equipos de Alto Rendimiento" class="img-cover">
+          </figure>
+
+          <div class="card-actions">
+
+            <span class="badge">Avanzado</span>
+
+            <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
+              <ion-icon name="heart"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="card-content">
+
+            <ul class="card-meta-list">
+
+              <li class="card-meta-item">
+                <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+
+                <span class="card-meta-text">40 lecciones</span>
+              </li>
+
+              <li class="card-meta-item">
+                <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                <time datetime="PT22H0M0S" class="card-meta-text">22h 0m 0s</time>
+              </li>
+
+            </ul>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">Trabajo en Equipo: Cómo Crear Equipos de Alto Rendimiento</a>
+            </h3>
+
+            <div class="rating-wrapper">
+
+              <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+
+              <span class="rating-text">(60 Visitas)</span>
+
+            </div>
+          </div>
+        </div>
+      </li>
+
+      <li>
+        <div class="course-card">
+
+          <figure class="card-banner">
+            <img src="./assets/images/or.jpg" width="370" height="270" loading="lazy"
+              alt="Desarrollo de Habilidades de Liderazgo para Directivos" class="img-cover">
+          </figure>
+
+          <div class="card-actions">
+
+            <span class="badge">Basico</span>
+
+            <button class="whishlist-btn" aria-label="Add to whishlist" data-whish-btn>
+              <ion-icon name="heart"></ion-icon>
+            </button>
+
+          </div>
+
+          <div class="card-content">
+
+            <ul class="card-meta-list">
+
+              <li class="card-meta-item">
+                <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+
+                <span class="card-meta-text">25 lecciones</span>
+              </li>
+
+              <li class="card-meta-item">
+                <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+
+                <time datetime="PT15H0M0S" class="card-meta-text">15h 0m 0s</time>
+              </li>
+
+            </ul>
+
+            <h3 class="h3">
+              <a href="#" class="card-title">Desarrollo de Habilidades de Liderazgo para Directivos</a>
+            </h3>
+
+            <div class="rating-wrapper">
+
+              <div class="rating">
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+                <ion-icon name="star"></ion-icon>
+              </div>
+
+              <span class="rating-text">(35 Visitas)</span>
+
+            </div>
+          </div>
+
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+   <!-- Opiniones -->
+<section class="course-reviews">
+  <h2>Opiniones del Curso</h2>
+  <div class="review-summary">
+    <p>⭐ 4.8 - 350 opiniones</p>
+  </div>
+  <div class="reviews">
+    <div class="review">
+      <p><strong>Ana Torres</strong> ⭐⭐⭐⭐⭐</p>
+      <p>La profesora Lucia García tiene una gran capacidad para motivar y enseñar. Los ejercicios prácticos y los estudios de caso me ayudaron a entender cómo aplicar las técnicas de liderazgo.</p>
+    </div>
+    <div class="review">
+      <p><strong>Juan Martínez</strong> ⭐⭐⭐⭐⭐</p>
+      <p>Este curso me dio las herramientas para mejorar mi comunicación dentro de equipos de trabajo y para resolver conflictos de manera eficiente. Altamente recomendado.</p>
+    </div>
+    <!-- Más opiniones -->
+    <div class="extra-reviews">
+      <div class="review">
+        <p><strong>Claudia Pérez</strong> ⭐⭐⭐⭐</p>
+        <p>El curso es excelente, pero me gustaría que incluyera más ejemplos prácticos de liderazgo en empresas. Aun así, los conceptos y las dinámicas grupales fueron muy útiles.</p>
+      </div>
+      <div class="review">
+        <p><strong>Mario López</strong> ⭐⭐⭐⭐⭐</p>
+        <p>Lucia García tiene un enfoque práctico que facilita la comprensión de los temas. El curso cubre todos los aspectos del liderazgo y el trabajo en equipo de manera muy efectiva.</p>
+      </div>
+      <div class="review">
+        <p><strong>Elena Gómez</strong> ⭐⭐⭐⭐⭐</p>
+        <p>Este curso transformó mi forma de trabajar en equipo. Aprendí a ser un mejor líder y a colaborar más eficazmente con mis compañeros. La profesora es una excelente comunicadora.</p>
+      </div>
+    </div>
+  </div>
+  <button id="load-more" class="load-more">Ver más comentarios</button>
+</section>
+</html>
+<script src="./assets/js/script1.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

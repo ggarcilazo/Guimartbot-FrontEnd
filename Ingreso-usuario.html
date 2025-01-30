@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuimarBot</title> <!-- Título modificado -->
+  
+    <!-- 
+      - favicon
+    -->
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+  
+    <!-- 
+      - custom css link
+    -->
+    <link id="theme-style" rel="stylesheet" href="./assets/css/style.css">
+  
+    <!-- 
+      - google font link
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  
+    <!-- 
+      - preload images
+    -->
+    <link rel="preload" as="image" href="./assets/images/hero-banner.png">
+  </head>
+<body id="top">
+
+    <!-- Encabezado (Header) -->
+    <header class="header" data-header>
+        <div class="container">
+          <h1>
+            <a href="#" class="logo">GuimarBot</a>
+          </h1>
+    
+          <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+              <a href="#" class="logo">GuimarBot</a>
+    
+              <button class="nav-close-btn" aria-label="Cerrar menú" data-nav-toggler>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+    
+            <ul class="navbar-list"> 
+              <li class="navbar-item">
+                <a href="index.html#home" class="navbar-link" data-nav-toggler>Inicio</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#about" class="navbar-link" data-nav-toggler>Acerca de</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#courses" class="navbar-link" data-nav-toggler>Cursos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#event" class="navbar-link" data-nav-toggler>Eventos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#plans-container" class="navbar-link" data-nav-toggler>Planes de Suscripción</a>
+              </li>
+              <li class="navbar-item"></li>
+                <a href="Postular.html" class="navbar-link" data-nav-toggler>Postular Beca</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#newsletter" class="navbar-link" data-nav-toggler>Contacto</a> <!-- Cambiado a español -->
+              </li>
+            </ul>
+    
+            
+          </nav>
+    
+          <div class="header-actions">
+            <button class="header-action-btn" aria-label="Abrir búsqueda" data-search-toggler>
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+    
+            <!-- Botón del carrito -->
+            <button class="header-action-btn" aria-label="Carrito-Compra" id="mostrar-carrito">
+              <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+              <span id="cart-count" class="cart-count">0</span>
+            </button>
+            <!-- Botón de Racha (Streak Button) -->
+            <button class="header-action-btn racha-btn" aria-label="Racha-Diaria" id="mostrar-racha" onclick="window.location.href='Recompensa.html'">
+              <ion-icon name="flame-outline" aria-hidden="true"></ion-icon>
+            </button>
+    
+            
+            <div id="cart-dropdown" class="cart-dropdown hidden">
+              <table id="lista-carrito" class="cart-table">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+    
+              <div class="cart-footer">
+                <button id="vaciar-carrito" class="btn btn-primary">Vaciar carrito</button>
+                <p id="total-precio" class="total-precio">Total: $0.00</p>
+                <button id="pagar-carrito" class="btn btn-primary" onclick="window.location.href='pago.html'" >Pagar</button>
+              </div>
+              
+            </div>
+    
+            <a href="#" class="header-action-btn login-btn">
+              <img src="./assets/images/usuario.png" alt="Perfil" class="profile-image2" />
+              <span class="span">Miguelito123</span>
+            </a>
+            
+            <!-- Menú -->
+            <div class="dropdown-menu">
+              <a href="Ingreso-usuario.html" class="dropdown-item">Inicio</a>
+              <a href="Ingreso-usuario.html#courses" class="dropdown-item">Mis cursos</a>
+              <a href="#" id="change-background" class="dropdown-item">Cambiar Fondo</a>
+            
+              <!-- Submenú -->
+              <div class="submenu" id="background-submenu">
+                <a href="#" class="dropdown-item" id="niños-btn">Niños</a>
+                <a href="#" class="dropdown-item" id="adolescentes-btn">Adolescentes</a>
+                <a href="#" class="dropdown-item" id="adultos-btn">Adultos</a>
+              </div>
+            
+              <a href="Ajustes-perfil.html" class="dropdown-item">Ajustes</a>
+              <a href="index.html" class="dropdown-item">Cerrar sesión</a>
+            </div>
+            
+
+              
+    
+            <button class="header-action-btn nav-open-btn" aria-label="Abrir menú" data-nav-toggler>
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+    
+          <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+      </div>
+    
+      </header>
+  <!--   - #SEARCH BOX -->
+  <div class="search-container" data-search-box>
+    <div class="container">
+      <button class="search-close-btn" aria-label="Cerrar búsqueda" data-search-toggler>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <div class="search-wrapper">
+        <input type="search" name="search" placeholder="Buscar aquí..." aria-label="Buscar" class="search-field">
+        <button class="search-submit" aria-label="Enviar" data-search-toggler>
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+  </div>
+
+
+    <main>
+      <!-- 
+      - #HERO-->
+      
+      <section class="hero" id="home" aria-label="hero" style="background-image: url('./assets/images/hero-bghero-bg.jpg')">
+        <div class="container">
+          <div class="hero-content">
+            <p class="section-subtitle">Un Futuro de Aprendizaje Mejor con Nosotros</p>
+            <h2 class="h1 hero-title">¡Bienvenido al grupo GuimarBot!</h2>
+            <p class="hero-text">
+                Prepárate para explorar y crear mientras te sumerges en el diseño, la programación y la construcción de robots. 
+                A través de proyectos emocionantes, aprenderás a dar vida a tus ideas y a dominar las tecnologías que están dando forma al futuro.
+                 ¡Empecemos a construir juntos!
+            </p>
+            <a href="#courses" class="btn btn-primary">
+              <span class="span">Ver mis Cursos</span>
+              <ion-icon name="arrow-forward-outline" aria-hidden="true"></ion-icon>
+            </a>
+            
+          </div>
+      
+          <figure class="hero-banner">
+            <img src="./assets/images/hero-banner.png" width="600" height="600" loading="lazy" alt="imagen hero" class="w-200">
+          </figure>
+        
+      </section>  
+
+           <!-- 
+        - #COURSE
+      -->
+      <section class="section course" id="courses" aria-label="course" style="background-image: url('./assets/images/hero-bg.jpg')">
+
+        <div class="container">
+          <h2 class="h2 section-title">Tus Cursos</h2>
+        <div class="filter">
+          <label>Cursos Activos</label>
+        </div>
+          <ul class="grid-list">
+      
+                  <li class="course-item" data-age="12">
+                      <div class="course-card">
+                          <figure class="card-banner">
+                              <img src="./assets/images/a.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de robótica" class="img-cover">
+                          </figure>
+                          <div class="card-actions">
+                              <span class="badge">Básico</span>
+                              <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                  <ion-icon name="heart"></ion-icon>
+                              </button>
+                          </div>
+                          <div class="card-content">
+                              <ul class="card-meta-list">
+                                  <li class="card-meta-item">
+                                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                      <span class="card-meta-text">20 lecciones</span>
+                                  </li>
+                                  <li class="card-meta-item">
+                                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                      <time datetime="PT10H">10h</time>
+                                  </li>
+                              </ul>
+                              <h3 class="h3">
+                                  <a href="#" class="card-title">ROBÓTICA</a>
+                              </h3>
+                              <div class="rating-wrapper">
+                                  <div class="rating">
+                                      <ion-icon name="star"></ion-icon>
+                                      <ion-icon name="star"></ion-icon>
+                                      <ion-icon name="star"></ion-icon>
+                                      <ion-icon name="star"></ion-icon>
+                                      <ion-icon name="star"></ion-icon>
+                                  </div>
+                                  <span class="rating-text">(15 Visitas)</span>
+                              </div>
+                              <button class="add-to-cart-btn"  onclick="window.location.href='Clases-Curso-Robotica.html'">Ingresar al curso</button>
+                              <div class="card-footer">
+                                  <div class="card-price">
+                                      <span class="span">Activo</span>
+                                  </div>
+                                  <div class="card-meta-item">
+                                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                      <span class="card-meta-text">32 Estudiantes</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+      
+                  <li class="course-item" data-age="12">
+                      <div class="course-card">
+                          <figure class="card-banner">
+                              <img src="./assets/images/arte.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de arte" class="img-cover">
+                          </figure>
+                          <div class="card-actions">
+                              <span class="badge">Intermedio</span>
+                              <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                  <ion-icon name="heart"></ion-icon>
+                              </button>
+                          </div>
+                          <div class="card-content">
+                              <ul class="card-meta-list">
+                                  <li class="card-meta-item">
+                                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                      <span class="card-meta-text">30 lecciones</span>
+                                  </li>
+                                  <li class="card-meta-item">
+                                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                      <time datetime="PT12H">12h</time>
+                                  </li>
+                              </ul>
+                              <h3 class="h3">
+                                  <a href="Clase-Arte.html" class="card-title">ARTE CREATIVO</a>
+                              </h3>
+                              <div class="rating-wrapper">
+                                  <div class="rating">
+                                      <ion-icon name="star"></ion-icon>
+                                      <ion-icon name="star"></ion-icon>
+                                      <ion-icon name="star"></ion-icon>
+                                      <ion-icon name="star"></ion-icon>
+                                      <ion-icon name="star"></ion-icon>
+                                  </div>
+                                  <span class="rating-text">(12 Visitas)</span>
+                              </div>
+                              <button class="add-to-cart-btn"  onclick="window.location.href='Clases-Curso-Arte.html'">Ingresar al curso</button>
+                              <div class="card-footer">
+                                  <div class="card-price">
+                                      <span class="span">Activo</span>
+                                  </div>
+                                  <div class="card-meta-item">
+                                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                      <span class="card-meta-text">28 Estudiantes</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+      
+                  <li class="course-item" data-age="12">
+                      <div class="course-card">
+                          <figure class="card-banner">
+                              <img src="./assets/images/2.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de matemáticas" class="img-cover">
+                          </figure>
+                          <div class="card-actions">
+                              <span class="badge">Básico</span>
+                              <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                  <ion-icon name="heart"></ion-icon>
+                              </button>
+                          </div>
+                          <div class="card-content">
+                              <ul class="card-meta-list">
+                                  <li class="card-meta-item">
+                                      <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                      <span class="card-meta-text">15 lecciones</span>
+                                  </li>
+                                  <li class="card-meta-item">
+                                      <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                      <time datetime="PT8H">8h</time>
+                                  </li>
+                              </ul>
+                              <h3 class="h3">
+                                  <a href="Clases-Curso-Matematica.html" class="card-title">MATEMÁTICAS DIVERTIDAS</a>
+                              </h3>
+                              <div class="rating-wrapper">
+                                  <div class="rating">
+                                      <ion-icon name="star"></ion-icon>
+                                      <ion-icon name="star"></ion-icon>
+                                      <ion-icon name="star"></ion-icon>
+                                      <ion-icon name="star"></ion-icon>
+                                      <ion-icon name="star-outline"></ion-icon>
+                                  </div>
+                                  <span class="rating-text">(10 Visitas)</span>
+                              </div>
+                              <button class="add-to-cart-btn"  onclick="window.location.href='Clases-Curso-Matematica.html'">Ingresar al curso</button>
+                              <div class="card-footer">
+                                  <div class="card-price">
+                                      <span class="span">Activo</span>
+                                  </div>
+                                  <div class="card-meta-item">
+                                      <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                      <span class="card-meta-text">20 Estudiantes</span>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </li>
+      
+          </ul>
+        </div>
+        
+      </section>
+    
+
+
+     
+          
+    </main>
+
+
+        <!-- 
+      - #PIE DE PÁGINA
+    -->
+  
+    <footer class="footer">
+      <div class="container">
+  
+        <div class="footer-top">
+  
+          <div class="footer-brand">
+  
+            <a href="#" class="logo">EduHome</a>
+  
+            <p class="section-text">
+              Es bien sabido que los lectores tienden a distraerse con el contenido visible de una página al analizar su diseño.
+            </p>
+  
+            <ul class="social-list">
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+  
+              <li>
+                <a href="#" class="social-link">
+                  <ion-icon name="logo-pinterest"></ion-icon>
+                </a>
+              </li>
+  
+            </ul>
+  
+          </div>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Explorar</p>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Sobre Nosotros</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Eventos Próximos</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Blog y Noticias</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Preguntas Frecuentes</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Testimonios</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Política de Privacidad</span>
+              </a>
+            </li>
+  
+          </ul>
+  
+          <ul class="footer-list">
+  
+            <li>
+              <p class="footer-list-title">Contacto</p>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Contacto</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Ubicación</span>
+              </a>
+            </li>
+  
+            <li>
+              <a href="#" class="footer-link">
+                <ion-icon name="chevron-forward" aria-hidden="true"></ion-icon>
+  
+                <span class="span">Soporte</span>
+              </a>
+            </li>
+  
+          </ul>
+  
+        </div>
+
+  
+      </div>
+    </footer>
+
+    <script src="./assets/js/editarjsscript.js"></script>
+    <script src="./assets/js/script.js" defer></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

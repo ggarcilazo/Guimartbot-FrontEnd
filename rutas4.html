@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rutas</title>
+    <!-- 
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+  <!-- 
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/styles1.css">
+  
+
+  <!-- 
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header" data-header>
+        <div class="container">
+          <h1>
+            <a href="#" class="logo">GuimarBot</a>
+          </h1>
+    
+          <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+              <a href="#" class="logo">GuimarBot</a>
+    
+              <button class="nav-close-btn" aria-label="Cerrar menú" data-nav-toggler>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+    
+            <ul class="navbar-list"> 
+              <li class="navbar-item">
+                <a href="index.html#home" class="navbar-link" data-nav-toggler>Inicio</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#about" class="navbar-link" data-nav-toggler>Acerca de</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#courses" class="navbar-link" data-nav-toggler>Cursos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#event" class="navbar-link" data-nav-toggler>Eventos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#plans-container" class="navbar-link" data-nav-toggler>Planes de Suscripción</a>
+              </li>
+              <li class="navbar-item"></li>
+                <a href="Postular.html" class="navbar-link" data-nav-toggler>Postular Beca</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#newsletter" class="navbar-link" data-nav-toggler>Contacto</a> <!-- Cambiado a español -->
+              </li>
+            </ul>
+    
+            
+          </nav>
+    
+          <div class="header-actions">
+            <button class="header-action-btn" aria-label="Abrir búsqueda" data-search-toggler>
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+    
+            <!-- Botón del carrito -->
+            <button class="header-action-btn" aria-label="Carrito-Compra" id="mostrar-carrito">
+              <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+              <span id="cart-count" class="cart-count">0</span>
+            </button>
+    
+            
+            <div id="cart-dropdown" class="cart-dropdown hidden">
+              <table id="lista-carrito" class="cart-table">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Cantidad</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+    
+              <div class="cart-footer">
+                <button id="vaciar-carrito" class="btn btn-primary">Vaciar carrito</button>
+                <p id="total-precio" class="total-precio">Total: $0.00</p>
+                <button id="pagar-carrito" class="btn btn-primary" onclick="window.location.href='pago.html'" >Pagar</button>
+              </div>
+              
+            </div>
+    
+            <a href="#" class="header-action-btn login-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+              <span class="span">Iniciar sesión / Registrarse</span> <!-- Cambiado a español -->
+            </a>
+    
+            <button class="header-action-btn nav-open-btn" aria-label="Abrir menú" data-nav-toggler>
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+    
+          <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+      </div>
+    
+      </header>
+
+<body>
+  <div class="main-section">
+    <!-- Información del Profesor -->
+    <div class="professor-info">
+      <img src="./assets/images/la.jpg" alt="Profesora Laura Fernández" class="professor-image">
+      <div class="professor-details">
+        <h3>Laura Fernández</h3>
+        <p>Especialista en Creación de Videojuegos</p>
+        <p>Imparte clases de desarrollo de videojuegos con Unity, diseño 2D y 3D, y programación avanzada para juegos.</p>
+      </div>
+    </div>
+
+    <!-- Información del Curso -->
+    <div class="course-info">
+      <h1>Curso de Desarrollo de Videojuegos con Unity</h1>
+      <p>En este curso aprenderás a desarrollar videojuegos desde cero utilizando Unity. Cubre desde los conceptos básicos hasta la creación de proyectos avanzados.</p>
+      <div class="course-details">
+        <div class="requirements">
+          <h3>Conocimientos Previos</h3>
+          <ul>
+            <li>Programación Básica</li>
+            <li>Conocimientos en diseño gráfico (opcional)</li>
+          </ul>
+          <h3>Software y Recursos </h3>
+          <ul>
+            <li>Unity 3D</li>
+            <li>C# (lenguaje de programación)</li>
+            <li>Photoshop (para diseño de assets)</li>
+            <li>Blender (para modelado 3D)</li>
+            <li>Materiales adicionales</li>
+          </ul>
+        </div>
+        <div class="certificate">
+          <h3>Certificado</h3>
+          <p>Al finalizar el curso, recibirás un certificado que valida tu conocimiento en el desarrollo de videojuegos con Unity.</p>
+          <img src="./assets/images/PARA EL VIDEO.jpg" alt="Certificado">
+        </div>
+      </div>
+    </div>
+</div>
+
+  <section class="section course" id="courses" aria-label="course">
+    <div class="container">
+  
+      <ul class="grid-list">
+  
+        <li>
+          <div class="course-card">
+  
+            <figure class="card-banner">
+              <img src="./assets/images/ve.jpeg" width="370" height="270" loading="lazy"
+                alt="Fundamentos del Diseño de Videojuegos" class="img-cover">
+            </figure>
+  
+            <div class="card-actions">
+  
+              <span class="badge">Básico</span>
+  
+              <button class="whishlist-btn" aria-label="Add to wishlist" data-whish-btn>
+                <ion-icon name="heart"></ion-icon>
+              </button>
+  
+            </div>
+  
+            <div class="card-content">
+  
+              <ul class="card-meta-list">
+  
+                <li class="card-meta-item">
+                  <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                  <span class="card-meta-text">30 lecciones</span>
+                </li>
+  
+                <li class="card-meta-item">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  <time datetime="PT8H00M">8h 00m</time>
+                </li>
+  
+              </ul>
+  
+              <h3 class="h3">
+                <a href="#" class="card-title">Fundamentos del Diseño de Videojuegos</a>
+              </h3>
+  
+              <div class="rating-wrapper">
+                <div class="rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                  <ion-icon name="star-outline"></ion-icon>
+                </div>
+                <span class="rating-text">(28 Opiniones)</span>
+              </div>
+  
+            </div>
+  
+          </div>
+        </li>
+  
+        <li>
+          <div class="course-card">
+  
+            <figure class="card-banner">
+              <img src="./assets/images/uni.jpg" width="370" height="270" loading="lazy"
+                alt="Desarrollo de Videojuegos con Unity" class="img-cover">
+            </figure>
+  
+            <div class="card-actions">
+  
+              <span class="badge">Intermedio</span>
+  
+              <button class="whishlist-btn" aria-label="Add to wishlist" data-whish-btn>
+                <ion-icon name="heart"></ion-icon>
+              </button>
+  
+            </div>
+  
+            <div class="card-content">
+  
+              <ul class="card-meta-list">
+  
+                <li class="card-meta-item">
+                  <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                  <span class="card-meta-text">45 lecciones</span>
+                </li>
+  
+                <li class="card-meta-item">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  <time datetime="PT12H00M">12h 00m</time>
+                </li>
+  
+              </ul>
+  
+              <h3 class="h3">
+                <a href="#" class="card-title">Desarrollo de Videojuegos con Unity</a>
+              </h3>
+  
+              <div class="rating-wrapper">
+                <div class="rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star-half"></ion-icon>
+                </div>
+                <span class="rating-text">(35 Opiniones)</span>
+              </div>
+  
+            </div>
+  
+          </div>
+        </li>
+  
+        <li>
+          <div class="course-card">
+  
+            <figure class="card-banner">
+              <img src="./assets/images/2d.png" width="370" height="270" loading="lazy"
+                alt="Desarrollo de Videojuegos 2D con Godot" class="img-cover">
+            </figure>
+  
+            <div class="card-actions">
+  
+              <span class="badge">Avanzado</span>
+  
+              <button class="whishlist-btn" aria-label="Add to wishlist" data-whish-btn>
+                <ion-icon name="heart"></ion-icon>
+              </button>
+  
+            </div>
+  
+            <div class="card-content">
+  
+              <ul class="card-meta-list">
+  
+                <li class="card-meta-item">
+                  <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                  <span class="card-meta-text">50 lecciones</span>
+                </li>
+  
+                <li class="card-meta-item">
+                  <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                  <time datetime="PT16H00M">16h 00m</time>
+                </li>
+  
+              </ul>
+  
+              <h3 class="h3">
+                <a href="#" class="card-title">Desarrollo de Videojuegos 2D con Godot</a>
+              </h3>
+  
+              <div class="rating-wrapper">
+                <div class="rating">
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                  <ion-icon name="star"></ion-icon>
+                </div>
+                <span class="rating-text">(40 Opiniones)</span>
+              </div>
+  
+            </div>
+  
+          </div>
+        </li>
+  
+      </ul>
+    </div>
+  </section>
+  
+   <!-- Opiniones -->
+<section class="course-reviews">
+  <h2>Opiniones del Curso</h2>
+  <div class="review-summary">
+    <p>⭐ 4.8 - 215 opiniones</p>
+  </div>
+  <div class="reviews">
+    <div class="review">
+      <p><strong>Javier Gómez</strong> ⭐⭐⭐⭐⭐</p>
+      <p>La profesora tiene una gran capacidad para explicar los conceptos de manera clara. Además, el enfoque práctico es excelente.</p>
+    </div>
+    <div class="review">
+      <p><strong>Carla Ruiz</strong> ⭐⭐⭐⭐⭐</p>
+      <p>Un curso muy completo. El contenido es fácil de seguir y se adapta a todos los niveles. Me encantaron los proyectos que realizamos.</p>
+    </div>
+    <!-- Más opiniones -->
+    <div class="extra-reviews">
+      <div class="review">
+        <p><strong>Pedro Martínez</strong> ⭐⭐⭐⭐</p>
+        <p>El curso es muy bueno, aunque me gustaría que profundizara un poco más en la parte de optimización de juegos.</p>
+      </div>
+      <div class="review">
+        <p><strong>Lucía Pérez</strong> ⭐⭐⭐⭐⭐</p>
+        <p>Me ha encantado cómo la profesora organiza las clases y cómo cada lección se conecta con el siguiente paso del proyecto.</p>
+      </div>
+      <div class="review">
+        <p><strong>Fernando Rodríguez</strong> ⭐⭐⭐⭐⭐</p>
+        <p>La profesora tiene una excelente metodología y explica de manera sencilla temas complejos de programación y diseño de juegos.</p>
+      </div>
+    </div>
+  </div>
+  <button id="load-more" class="load-more">Ver más comentarios</button>
+</section>
+</html>
+<script src="./assets/js/script1.js"></script>
+  <script src="./assets/js/script.js" defer></script>
+
+  <!-- 
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

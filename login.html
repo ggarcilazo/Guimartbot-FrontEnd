@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuimarBot</title>
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- STYLE -->
+    <link rel="stylesheet" href="./assets/css/login.css">
+</head>
+<body>
+    <!-- Form Container -->
+    <div class="from-container">
+        <div class="col col-1">
+            <div class="image-layer">
+                <img src="./assets/images/white-outline.png" class="form-image-main">
+                <img src="./assets/images/dots.png" class="form-image dots">
+                <img src="./assets/images/coin.png" class="form-image coin">
+                <img src="./assets/images/spring.png" class="form-image spring">
+                <img src="./assets/images/hero-banner.png" class="form-image hero-banner">
+                <img src="./assets/images/stars.png" class="form-image starts">
+            </div>
+            <p class="featured-words">Estás a pocos minutos de mejorar tus habilidades con <span>GuimarBot</span></p>
+        </div>
+        <div class="col col-2">
+            <div class="btn-box">
+                <button class="btn btn-1" id="login">Iniciar sesión</button>
+                <button class="btn btn-1" id="register">Regístrate</button>
+            </div>
+            
+            <!-- Login Form Container -->
+            <form class="login-form" action="/auth/login" method="POST" id="loginForm">
+                <div class="form-title">
+                    <span>Iniciar sesión</span>
+                </div>
+                <div class="form-inputs">
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Usuario" name="username" required>
+                        <i class="bx bx-user icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Contraseña" name="password" required>
+                        <i class="bx bx-lock-alt icon"></i>
+                    </div>
+                    
+                    <!-- Role Key Input Field (Hidden by Default) -->
+                    <div class="input-box" id="roleKeyFieldLogin" style="display: none;">
+                        <input type="text" class="input-field" placeholder="Role Key" name="roleKey">
+                        <i class="bx bx-key icon"></i>
+                    </div>
+
+                    <div class="forgot-pass">
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <div class="input-box">
+                        <button type="submit" class="input-submit" >
+                            <span>Iniciar sesión</span>
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="socia-login">
+                    <i class="bx bxl-google"></i>
+                    <i class="bx bxl-facebook"></i>
+                    <i class="bx bxl-twitter"></i>
+                    <i class="bx bxl-github"></i>
+                </div>
+            </form>
+
+
+            <!-- Register Form Container -->
+            <form class="register-form" action="/auth/register" method="POST" id="registerForm">
+                <div class="form-title">
+                    <span>Regístrate</span>
+                </div>
+                <div class="form-inputs">
+                    <div class="input-box">
+                        <input type="email" class="input-field" placeholder="Email" name="email" required>
+                        <i class="bx bx-envelope icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="text" class="input-field" placeholder="Usuario" name="username" required>
+                        <i class="bx bx-user icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="password" class="input-field" placeholder="Contraseña" name="password" required>
+                        <i class="bx bx-lock-alt icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="date" class="input-field" name="birthdate" required>
+                        <i class="bx bx-date icon"></i>
+                    </div>
+                    <div class="input-box">
+                        <button type="submit" class="input-submit">
+                            <span>Registrarse</span>
+                            <i class="bx bx-right-arrow-alt"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="socia-login">
+                    <i class="bx bxl-google"></i>
+                    <i class="bx bxl-facebook"></i>
+                    <i class="bx bxl-twitter"></i>
+                    <i class="bx bxl-github"></i>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

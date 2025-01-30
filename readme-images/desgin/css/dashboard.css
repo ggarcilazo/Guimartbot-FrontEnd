@@ -1,0 +1,80 @@
+/* Estilos Específicos para el Dashboard */
+
+.dashboard-content {
+    margin: 20px;
+    padding: 20px;
+ }
+ 
+ .dashboard-header {
+    margin-bottom: 30px;
+ }
+ 
+ .dashboard-header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+ }
+ 
+ .stats-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+ }
+ 
+ .stats-card {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 23%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .stats-card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+ }
+ 
+ .quick-links {
+    margin-bottom: 30px;
+ }
+ 
+ .quick-link-container {
+    display: flex;
+    justify-content: space-between;
+ }
+ 
+ .quick-link {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 23%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .quick-link i {
+    font-size: 40px;
+    margin-bottom: 10px;
+ }
+ 
+ .latest-activity {
+    margin-top: 30px;
+ }
+ 
+ .latest-activity ul {
+    list-style: none;
+    padding: 0;
+ }
+ 
+ .latest-activity li {
+    background-color: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+ }
+ 
+ .latest-activity li i {
+    margin-right: 10px;
+ }
+ 

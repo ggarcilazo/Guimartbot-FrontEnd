@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuimarBot</title>
+    <link rel="stylesheet" href="assets/css/stylepago.css">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Nueva columna con el cuadro morado y blanco debajo, alineados a la izquierda -->
+        <div class="order-column">
+
+            <div class="order-summary">
+                <div class="summary-header">
+                    <button class="back-button-container" onclick="window.location.href='index.html'">
+                        <span class="arrow">&larr;</span>
+                        <img src="./readme-images/desgin/images/SVG_cabezabot.svg" alt="Logo" class="logo-image">
+                        <span class="back-text"> | GUIMARBOT</span>
+                    </button>
+                </div>
+                <p class="order-title">Tu orden de compra esta aqui: </p>
+            </div>
+            
+
+
+
+            <div class="order-details">
+                <!-- Contenedor de los elementos del carrito -->
+                <div class="order-items" id="order-items-container">
+                  <!-- Los elementos del carrito se insertarán dinámicamente aquí -->
+                </div>
+              
+                <!-- Tabla oculta con solo los datos necesarios -->
+                <div class="cart-table-container">
+                  <table id="lista-carrito" class="cart-table">
+                    
+                    <tbody>
+                      <!-- Las filas del carrito se agregarán dinámicamente aquí -->
+                    </tbody>
+                  </table>
+
+                  <div id="pago-container" class="order-total">
+                    <span>Total</span>
+                    <span id="total-pago">$0.00</span>
+                  </div>
+                  
+                  
+
+                </div>
+            
+            </div>
+              
+        </div>
+
+        <!-- Formulario de pago a la derecha de la columna de orden -->
+        <form action="">
+            <div class="row">
+                <div class="column">
+                    <h3 class="title">Direccion de Envio</h3>
+                    <div class="input-box">
+                        <span>Nombre Completo:</span>
+                        <input type="text" placeholder="Garcilazo Giovanni">
+                    </div>
+                    <div class="input-box">
+                        <span>Email:</span>
+                        <input type="email" placeholder="example@example.com">
+                    </div>
+                    <div class="input-box">
+                        <span>Direccion:</span>
+                        <input type="text" placeholder="Calle - Localidad">
+                    </div>
+                    <div class="input-box">
+                        <span>Departamento:</span>
+                        <input type="text" placeholder="Lima">
+                    </div>
+                    <div class="flex">
+                        <div class="input-box">
+                            <span>País:</span>
+                            <input type="text" placeholder="Perú">
+                        </div>
+                        <div class="input-box">
+                            <span>Codigo Postal:</span>
+                            <input type="text" placeholder="23456">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="column">
+                    <h3 class="title">Formas de Pago</h3>
+
+                    <div class="input-box">
+                        <span>Selecciona el metodo de pago:</span>
+
+                        <div class="payment-options">
+                            <button class="payment-button" id="yapeButton" type="button" onclick="showYape()">
+                                <img src="assets/images/pago-yape.svg" alt="Yape" width="50">
+                            </button>
+
+                            
+
+                            <button class="payment-button" id="plinButton" type="button" onclick="showPlin()">
+                                <img src="assets/images/pago-plin.svg" alt="Plin" width="50">
+                            </button>
+
+                            <button class="payment-button" type="button" onclick="showCard()">
+                                <img src="assets/images/pago-visa.svg" alt="Visa" width="50">
+                            </button>
+
+                            <button class="payment-button" type="button" onclick="showCard()">
+                                <img src="assets/images/pago-mastercad.svg" alt="Mastercard" width="50">
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div id="paymentInfo" class="input-box">
+                        <!-- El contenido se cambiará dinámicamente aquí -->
+                    </div>
+                </div>
+            </div>
+
+            <button type="button" class="btn" onclick="location.href='login.html'">Realizar el pedido</button>
+        </form>
+    </div>
+
+    <div class="modal-overlay hidden" id="modal-overlay">
+        <div class="modal-container" id="modal-container">
+            <!-- Aquí se cargará dinámicamente el contenido del modal -->
+        </div>
+    </div>
+    
+    <script src="../front-end/assets/js/script.js"></script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+          const totalCarrito = localStorage.getItem('carritoTotal');
+          if (totalCarrito !== null) {
+            document.getElementById('total-pago').textContent = `$${totalCarrito}`;
+          } else {
+            document.getElementById('total-pago').textContent = 'No hay elementos en el carrito.';
+          }
+        });
+    </script>
+      
+</body>
+</html>

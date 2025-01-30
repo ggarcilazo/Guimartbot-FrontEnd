@@ -1,0 +1,275 @@
+.payment-modal {
+    width: 300px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #2196F3;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: relative;
+}
+
+.payment-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+
+.qr-code {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+}
+  
+.payment-details p {
+    margin: 5px 0;
+    color: #2196F3;
+}
+
+.payment-amount h2 {
+    color: #2196F3;
+    margin: 10px 0;
+}
+  
+.payment-instructions {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 20px;
+}
+  
+.tab-button {
+    flex: 1;
+    padding: 10px;
+    background: #f5f5f5;
+    border: none;
+    border-bottom: 2px solid transparent;
+    cursor: pointer;
+}
+
+.tab-button.active {
+    border-bottom: 2px solid #2196F3;
+    background: #fff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content img.qr-code {
+    width: 150px;
+    height: 150px;
+    margin: 10px auto;
+}
+
+.tab-content:not(.hidden) {
+    display: block;
+}
+
+.payment-details p, .payment-instructions {
+    margin: 10px 0;
+}
+
+.phone-number {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    text-align: center;
+    margin-top: 10px;
+    color: #2196F3;
+}
+
+.payment-buttons button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+
+
+.btn-continue-plin {
+    background: #2196F3;
+    color: #fff;
+}
+
+.btn-close-plin {
+    background: #e5e5e5;
+    color: #333;
+}
+
+
+.upload-modal {
+    width: 350px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #2196F3;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.upload-modal.hidden {
+    display: none;
+}
+
+
+.file-input {
+    display: block;
+    margin: 10px auto;
+    border: none;
+}
+
+.btn-finalize {
+    background: #2196F3;
+    color: #fff;
+}
+
+.btn-back {
+    background: #e5e5e5;
+    color: #333;
+}
+.upload-modal {
+    width: 300px;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px #2196F3;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+}
+
+.upload-modal.hidden {
+    display: none;
+}
+
+.upload-box {
+    width: auto;
+    height: auto;
+    min-width: 150px;
+    min-height: 100px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    color: #666;
+    transition: all 0.3s ease;
+}
+
+.upload-label {
+    background: #e5e5e5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.file-input {
+    display: none;
+}
+
+.payment-buttons button {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.btn-finalize {
+    background: #2196F3;
+    color: #fff;
+}
+
+.btn-back {
+    background: #e5e5e5;
+    color: #333;
+}
+
+.payment-details {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.qr-code {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.hidden {
+    display: none;
+}
+
+.file-input {
+    display: none;
+}
+
+.select-file-button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.select-file-button:hover {
+    background-color: #2196F3;
+}
+
+.upload-box.dragover {
+    background-color: #e0e0e0;
+}
+
+.hidden {
+    display: none;
+}
+
+#preview-img {
+    max-width: 200px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#uploadBox {
+    max-width: 500px;
+    max-height: 400px;
+}
+
+.hidden {
+    display: none;
+}

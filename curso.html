@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GuimarBot</title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+
+</head>
+<body>
+    <!-- Encabezado (Header) -->
+    <header class="header" data-header>
+        <div class="container">
+          <h1>
+            <a href="#" class="logo">GuimarBot</a>
+          </h1>
+    
+          <nav class="navbar" data-navbar>
+            <div class="navbar-top">
+              <a href="#" class="logo">GuimarBot</a>
+    
+              <button class="nav-close-btn" aria-label="Cerrar menú" data-nav-toggler>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+    
+            <ul class="navbar-list"> 
+              <li class="navbar-item">
+                <a href="index.html#home" class="navbar-link" data-nav-toggler>Inicio</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#about" class="navbar-link" data-nav-toggler>Acerca de</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#courses" class="navbar-link" data-nav-toggler>Cursos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#event" class="navbar-link" data-nav-toggler>Eventos</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#plans-container" class="navbar-link" data-nav-toggler>Planes de Suscripción</a>
+              </li>
+              <li class="navbar-item"></li>
+                <a href="Postular.html" class="navbar-link" data-nav-toggler>Postular Beca</a> <!-- Cambiado a español -->
+              </li>
+              <li class="navbar-item">
+                <a href="index.html#newsletter" class="navbar-link" data-nav-toggler>Contacto</a> <!-- Cambiado a español -->
+              </li>
+            </ul>
+    
+            
+          </nav>
+    
+          <div class="header-actions">
+            <button class="header-action-btn" aria-label="Abrir búsqueda" data-search-toggler>
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+    
+            <!-- Botón del carrito -->
+            <button class="header-action-btn" aria-label="Carrito-Compra" id="mostrar-carrito">
+              <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+              <span id="cart-count" class="cart-count">0</span>
+            </button>
+    
+            
+            <div id="cart-dropdown" class="cart-dropdown hidden">
+              <table id="lista-carrito" class="cart-table">
+                <thead>
+                  <tr>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Precio</th>
+                    <th>Eliminar</th>
+                  </tr>
+                </thead>
+                <tbody></tbody>
+              </table>
+    
+              <div class="cart-footer">
+                <button id="vaciar-carrito" class="btn btn-primary">Vaciar carrito</button>
+                <p id="total-precio" class="total-precio">Total: $0.00</p>
+                <button id="pagar-carrito" class="btn btn-primary" onclick="window.location.href='pago.html'" >Pagar</button>
+              </div>
+              
+            </div>
+    
+            <a href="#" class="header-action-btn login-btn">
+              <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+              <span class="span">Iniciar sesión / Registrarse</span> <!-- Cambiado a español -->
+            </a>
+    
+            <button class="header-action-btn nav-open-btn" aria-label="Abrir menú" data-nav-toggler>
+              <ion-icon name="menu-outline"></ion-icon>
+            </button>
+          </div>
+    
+          <div class="overlay" data-nav-toggler data-overlay></div>
+        </div>
+      </div>
+    
+      </header>
+    
+      <!--   - #SEARCH BOX -->
+      <div class="search-container" data-search-box>
+        <div class="container">
+          <button class="search-close-btn" aria-label="Cerrar búsqueda" data-search-toggler>
+            <ion-icon name="close-outline"></ion-icon>
+          </button>
+    
+          <div class="search-wrapper">
+            <input type="search" name="search" placeholder="Buscar aquí..." aria-label="Buscar" class="search-field">
+            <button class="search-submit" aria-label="Enviar" data-search-toggler>
+              <ion-icon name="search-outline"></ion-icon>
+            </button>
+          </div>
+        </div>
+      </div>
+    
+     
+        <!-- 
+        - #HERO-->
+        
+    
+
+    <!-- Contenido principal de la página de cursos -->
+    <main>         
+        <section class="section course" id="courses" aria-label="course" style="background-image: url('./assets/images/course-bg.jpg')">
+            <div class="container">
+                <h2 class="h2 section-title">Cursos Disponibles</h2>
+                <div class="filter">
+                    <label>Cursos por edades:</label>
+                    <div class="age-buttons">
+                        <button class="age-btn" data-age="12">6-9 años</button>
+                        <button class="age-btn" data-age="18">10-17 años</button>
+                        <button class="age-btn" data-age="30">18+</button>
+                        <button class="age-btn" data-age="">Todos</button>
+                    </div>
+                </div>
+                <ul class="grid-list">
+              
+                          <!-- Cursos para 9-12 años -->
+                          <li class="course-item" data-age="12">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/a.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de robótica" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Básico</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">20 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT10H">10h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="Clases-Curso-Robotica.html" class="card-title">ROBÓTICA</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(15 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="robotica">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">$19.00</span>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">32 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+              
+                          <li class="course-item" data-age="12">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/arte.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de arte" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Intermedio</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">30 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT12H">12h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="Clases-Curso-Arte.html" class="card-title">ARTE CREATIVO</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(12 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="arte-creativo">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">Gratis</span>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">28 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+              
+                          <li class="course-item" data-age="12">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/2.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de matemáticas" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Básico</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">15 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT8H">8h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="Clases-Curso-Matematica.html" class="card-title">MATEMÁTICAS DIVERTIDAS</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(10 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="matematicas">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">$15.00</span>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">20 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+              
+                          <li class="course-item" data-age="12">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/15.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de ciencias" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Básico</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">25 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT10H">10h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="#" class="card-title">CIENCIAS</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(8 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="ciencias">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">$20.00</span>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">15 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+              
+                          <li class="course-item" data-age="12">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/14.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de lengua y literatura" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Básico</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">20 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT9H">9h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="#" class="card-title">LENGUAJE Y LITERATURA</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(5 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="lengua-literatura">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">$18.00</span>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">10 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+              
+                          <!-- Cursos para 13-18 años -->
+                          <li class="course-item" data-age="18">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/13.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de programación" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Básico</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">30 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT15H">15h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="Cursodeprogramacion.html" class="card-title">PROGRAMACIÓN</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(30 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="programacion">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">$40.00</span>
+                                              <del class="del">$50.00</del>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">50 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+              
+                          <li class="course-item" data-age="18">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/12.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de fotografía" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Intermedio</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">25 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT12H">12h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="#" class="card-title">FOTOGRAFÍA</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(20 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="fotografia">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">$25.00</span>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">35 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+              
+                          <li class="course-item" data-age="18">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/11.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de química avanzada" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Intermedio</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">40 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT15H">15h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="#" class="card-title">QUÍMICA AVANZADA</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(18 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="quimica">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">$35.00</span>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">25 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+              
+                          <li class="course-item" data-age="18">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/10.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de electrónica básica" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Básico</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">20 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT10H">10h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="#" class="card-title">ELECTRÓNICA BÁSICA</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(15 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="electronica">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">$30.00</span>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">20 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+              
+                          <li class="course-item" data-age="18">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/9.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de economía" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Básico</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">25 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT10H">10h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="#" class="card-title">ECONOMÍA</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(12 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="economia">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">$28.00</span>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">18 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+              
+                          <li class="course-item" data-age="30">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/8.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de diseño gráfico" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Intermedio</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">30 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT15H">15h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="#" class="card-title">DISEÑO GRÁFICO</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(16 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="diseno-grafico">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">$38.00</span>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">22 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+              
+                          <li class="course-item" data-age="30">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/7.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de desarrollo web" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Intermedio</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">35 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT20H">20h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="#" class="card-title">DESARROLLO WEB</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(25 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="desarrollo-web">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">$45.00</span>
+                                              <del class="del">$55.00</del>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">30 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+              
+                          <li class="course-item" data-age="30">
+                              <div class="course-card">
+                                  <figure class="card-banner">
+                                      <img src="./assets/images/6.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de marketing digital" class="img-cover">
+                                  </figure>
+                                  <div class="card-actions">
+                                      <span class="badge">Intermedio</span>
+                                      <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                          <ion-icon name="heart"></ion-icon>
+                                      </button>
+                                  </div>
+                                  <div class="card-content">
+                                      <ul class="card-meta-list">
+                                          <li class="card-meta-item">
+                                              <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">40 lecciones</span>
+                                          </li>
+                                          <li class="card-meta-item">
+                                              <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                              <time datetime="PT25H">25h</time>
+                                          </li>
+                                      </ul>
+                                      <h3 class="h3">
+                                          <a href="#" class="card-title">MARKETING DIGITAL</a>
+                                      </h3>
+                                      <div class="rating-wrapper">
+                                          <div class="rating">
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                              <ion-icon name="star-outline"></ion-icon>
+                                          </div>
+                                          <span class="rating-text">(30 Visitas)</span>
+                                      </div>
+                                      <button class="add-to-cart-btn" data-course-id="marketing-digital">Agregar al carrito</button>
+                                      <div class="card-footer">
+                                          <div class="card-price">
+                                              <span class="span">$50.00</span>
+                                          </div>
+                                          <div class="card-meta-item">
+                                              <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                              <span class="card-meta-text">25 Estudiantes</span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </li>
+
+                          <li class="course-item" data-age="30">
+                            <div class="course-card">
+                                <figure class="card-banner">
+                                    <img src="./assets/images/5.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de marketing digital" class="img-cover">
+                                </figure>
+                                <div class="card-actions">
+                                    <span class="badge">Intermedio</span>
+                                    <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                        <ion-icon name="heart"></ion-icon>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <ul class="card-meta-list">
+                                        <li class="card-meta-item">
+                                            <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                            <span class="card-meta-text">40 lecciones</span>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                            <time datetime="PT25H">25h</time>
+                                        </li>
+                                    </ul>
+                                    <h3 class="h3">
+                                        <a href="#" class="card-title">DATA SCIENCE</a>
+                                    </h3>
+                                    <div class="rating-wrapper">
+                                        <div class="rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star-outline"></ion-icon>
+                                            <ion-icon name="star-outline"></ion-icon>
+                                        </div>
+                                        <span class="rating-text">(30 Visitas)</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-course-id="marketing-digital">Agregar al carrito</button>
+                                    <div class="card-footer">
+                                        <div class="card-price">
+                                            <span class="span">$50.00</span>
+                                        </div>
+                                        <div class="card-meta-item">
+                                            <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                            <span class="card-meta-text">25 Estudiantes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="course-item" data-age="30">
+                            <div class="course-card">
+                                <figure class="card-banner">
+                                    <img src="./assets/images/4.webp" width="370" height="270" loading="lazy" alt="Imagen del curso de desarrollo web" class="img-cover">
+                                </figure>
+                                <div class="card-actions">
+                                    <span class="badge">Intermedio</span>
+                                    <button class="whishlist-btn" aria-label="Agregar a favoritos" data-whish-btn>
+                                        <ion-icon name="heart"></ion-icon>
+                                    </button>
+                                </div>
+                                <div class="card-content">
+                                    <ul class="card-meta-list">
+                                        <li class="card-meta-item">
+                                            <ion-icon name="reader-outline" aria-hidden="true"></ion-icon>
+                                            <span class="card-meta-text">35 lecciones</span>
+                                        </li>
+                                        <li class="card-meta-item">
+                                            <ion-icon name="time-outline" aria-hidden="true"></ion-icon>
+                                            <time datetime="PT20H">20h</time>
+                                        </li>
+                                    </ul>
+                                    <h3 class="h3">
+                                        <a href="#" class="card-title">ADMINISTRACIÓN DE EMPRESA</a>
+                                    </h3>
+                                    <div class="rating-wrapper">
+                                        <div class="rating">
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star"></ion-icon>
+                                            <ion-icon name="star-outline"></ion-icon>
+                                        </div>
+                                        <span class="rating-text">(25 Visitas)</span>
+                                    </div>
+                                    <button class="add-to-cart-btn" data-course-id="desarrollo-web">Agregar al carrito</button>
+                                    <div class="card-footer">
+                                        <div class="card-price">
+                                            <span class="span">$45.00</span>
+                                            <del class="del">$55.00</del>
+                                        </div>
+                                        <div class="card-meta-item">
+                                            <ion-icon name="people-outline" aria-hidden="true"></ion-icon>
+                                            <span class="card-meta-text">30 Estudiantes</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+              
+                      </ul>
+                  </div>
+              </section>
+            <script src="./assets/js/script.js" defer></script>
+              <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+              <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Becas - Guimartbot</title>
+    <link rel="stylesheet" href="css/becas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <!-- Agrega la biblioteca jsPDF para la generación de PDFs si fuera necesario -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h2>Guimartbot</h2>
+            <nav>
+                <ul>
+                    <li><a href="index2.html"><i class="fas fa-home"></i> Resumen</a></li>
+                    <li><a href="bandeja_entrada.html"><i class="fas fa-inbox"></i> Bandeja de Entrada</a></li>
+                    <li><a href="usuarios.html"><i class="fas fa-users"></i> Usuarios</a></li>
+                    <li><a href="docentes.html"><i class="fas fa-chalkboard-teacher"></i> Docentes</a></li>
+                    <li><a href="certificados.html"><i class="fas fa-certificate"></i> Certificados</a></li>
+                    <li><a href="becas.html" class="active"><i class="fas fa-graduation-cap"></i> Becas</a></li>
+                    <li><a href="pagos.html"><i class="fas fa-money-bill-wave"></i> Pagos</a></li>
+                    <li><a href="recursos.html"><i class="fas fa-book"></i> Recursos</a></li>
+                    <li><a href="administradores.html"><i class="fas fa-user-shield"></i> Administradores</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Contenido Principal -->
+        <main class="content">
+            <h1>Gestión de Becas</h1>
+
+            <!-- Tabla de becas -->
+            <section class="becas-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nombre del Solicitante</th>
+                            <th>Solicitud</th>
+                            <th>Fecha</th>
+                            <th>Estado</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Daniel Trogadara</td>
+                            <td>Beca</td>
+                            <td>2023-10-30</td>
+                            <td><span class="status pending">Por revisar</span></td>
+                            <td>
+                                <button class="gestion-button" onclick="openModal('Daniel Trogadara', 'Hola, he completado los cursos para solicitar mi beca. Adjunto mis documentos.', 'documento_beca.pdf')">
+                                    Gestionar
+                                </button>
+                            </td>
+                        </tr>
+                        <!-- Otras filas adicionales se pueden agregar aquí -->
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <!-- Modal para Detalles de la Beca -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h2 id="modalSolicitante"></h2>
+            <p id="modalMensaje"></p>
+            <a id="modalPdfLink" href="#" target="_blank" download>Descargar documento adjunto</a>
+            <div class="modal-buttons">
+                <button id="acceptButton" class="accept-button" onclick="aceptarBeca()">Aceptar Beca</button>
+                <button id="denyButton" class="deny-button" onclick="denegarBeca()">Negar Beca</button>
+                <button class="close-modal-button" onclick="closeModal()">Cerrar</button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="js/becas.js"></script>
+</body>
+</html>

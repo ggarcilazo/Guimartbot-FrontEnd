@@ -1,0 +1,308 @@
+/* Variables CSS */
+:root {
+    --primary-color: #2c3e50; /* Azul oscuro */
+    --background-color: #f0f4ff; /* Azul claro de fondo */
+    --text-color: #333; /* Color del texto principal */
+    --white-color: #fff; /* Blanco para texto y fondos */
+    --sidebar-bg-color: linear-gradient(135deg, #1e3a8a, #3b82f6); /* Gradiente de azul para el sidebar */
+    --hover-color: #4a90e2; /* Azul más claro para el hover */
+    --card-bg-color: rgba(255, 255, 255, 0.95); /* Fondo claro para tarjetas */
+    --shadow-color: rgba(0, 0, 0, 0.15); /* Color de la sombra */
+    --approved-color: #4caf50;
+    --pending-color: #ffa726;
+    --denied-color: #f44336;
+}
+
+/* Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    overflow: hidden;
+}
+
+/* Contenedor Principal */
+.app-container {
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    align-items: stretch;
+}
+
+/* Sidebar */
+.sidebar {
+    background: var(--sidebar-bg-color);
+    color: var(--white-color);
+    padding: 20px;
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 2px 0 12px var(--shadow-color);
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+}
+
+.sidebar h2 {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--white-color);
+    font-weight: 700;
+    text-shadow: 1px 2px 4px var(--shadow-color);
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+}
+
+.sidebar nav ul li {
+    margin: 10px 0;
+}
+
+.sidebar nav ul li a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 12px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 600;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.sidebar nav ul li a i {
+    font-size: 20px;
+}
+
+.sidebar nav ul li a:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0px 4px 10px rgba(74, 144, 226, 0.3);
+}
+
+.sidebar nav ul li.active a {
+    background-color: var(--hover-color);
+    font-weight: bold;
+}
+
+/* Contenido Principal */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: var(--background-color);
+    overflow-y: auto;
+    margin-left: 250px;
+}
+
+/* Título Principal */
+.content h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 30px;
+    border-bottom: 3px solid rgba(74, 144, 226, 0.3);
+    padding-bottom: 10px;
+}
+
+/* Tabla de Becas */
+.becas-table {
+    background-color: var(--card-bg-color);
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px var(--shadow-color);
+}
+
+.becas-table table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.becas-table th, .becas-table td {
+    padding: 15px;
+    text-align: left;
+}
+
+.becas-table th {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.becas-table td {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.becas-table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Estilos de Estado */
+.status {
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: var(--white-color);
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.status.approved {
+    background-color: var(--approved-color);
+}
+
+.status.pending {
+    background-color: var(--pending-color);
+}
+
+.status.denied {
+    background-color: var(--denied-color);
+}
+
+/* Botón de Acción */
+.gestion-button {
+    background-color: var(--hover-color);
+    border: none;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+}
+
+.gestion-button:hover {
+    background-color: #357ab8;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white-color);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+    z-index: 1001;
+    width: 500px;
+    max-width: 90%;
+}
+
+.modal-content {
+    position: relative;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.modal h3 {
+    font-size: 22px;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+}
+
+.modal p {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.modal a {
+    display: inline-block;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: var(--hover-color);
+    text-decoration: underline;
+}
+
+.modal-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.accept-button, .deny-button, .close-modal-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: var(--white-color);
+}
+
+.accept-button {
+    background-color: #4caf50;
+}
+
+.deny-button {
+    background-color: #f44336;
+}
+
+.close-modal-button {
+    background-color: #ff7043;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 70px;
+    }
+    .content {
+        margin-left: 70px;
+    }
+    .sidebar h2 {
+        font-size: 18px;
+    }
+    .sidebar nav ul li a {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
+
+.status {
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    color: var(--white-color);
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 0.9em;
+}
+
+.status.approved {
+    background-color: #4caf50; /* Verde para aprobado */
+}
+
+.status.pending {
+    background-color: #ffa726; /* Naranja para pendiente */
+}
+
+.status.denied {
+    background-color: #f44336; /* Rojo para denegado */
+}
